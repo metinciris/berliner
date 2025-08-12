@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berlin Aktiviteleri ve Rehberi - Ağustos 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .weather-container { background: linear-gradient(to bottom, #60a5fa, #3b82f6); }
+        .weather-container p { font-size: 1.1rem; }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.25rem; }
+            table { font-size: 0.875rem; }
+            .weather-container p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4 sm:p-6 max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-blue-900">Berlin Aktiviteleri ve Pratik Rehberi</h1>
+            <p class="mt-2 text-lg text-gray-600">Ağustos 2025 - GLS Campus Berlin</p>
+        </header>
+
+        <!-- Hava Durumu -->
+        <section class="weather-container rounded-lg p-6 mb-8 text-white shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Hava Durumu (Ağustos 2025)</h2>
+            <p class="mb-2">Berlin'de Ağustos 2025'te hava genellikle ılık, ortalama <strong>22-25°C</strong> (yüksek) ve <strong>13-15°C</strong> (düşük). Güneşli günler çoğunlukta (%54 açık), ancak yağmur ihtimali %30-40.</p>
+            <p><strong>Öneri:</strong> Hafif giysiler, rahat ayakkabılar ve bir yağmurluk getirin. 23 Ağustos sonrası hafif serinleme olabilir.</p>
+            <div id="weather-data" class="mt-4">
+                <p><em>Güncel hava durumu yükleniyor...</em></p>
+            </div>
+        </section>
+
+        <!-- Aktiviteler -->
+        <section class="bg-white rounded-lg p-6 mb-8 shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-900 mb-4">Önerilen Aktiviteler ve Gezilecek Yerler</h2>
+            <p class="mb-4">Dil okulu dışı zamanlarda (öğleden sonra, akşamlar, hafta sonları) öneriler. Prenzlauer Berg, genç ve canlı bir bölge. 23 Ağustos sonrası 3-5 gün için günübirlik geziler eklendi.</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Prenzlauer Berg:</strong> Kastanienallee'de kafeler, Mauerpark'ta pazar ve karaoke (Pazar günleri). Akşam barlarda sosyalleşme.</li>
+                <li><strong>Şehir Merkezi:</strong> Brandenburg Kapısı, Berlin Duvarı, Reichstag (ücretsiz, rezervasyon gerekli). Tiergarten'da piknik.</li>
+                <li><strong>Müzeler ve Kültür:</strong> Museum Island (200. yıl kutlamaları), Pergamon Müzesi. Festivaller: Tanz im August, Young Euro Classic.</li>
+                <li><strong>Açık Hava:</strong> Tempelhof'ta yürüyüş, Volkspark Friedrichshain'de yoga. Spree Nehri'nde tekne turu.</li>
+                <li><strong>Alışveriş ve Yemek:</strong> Hackescher Markt'ta butikler, vegan restoranlar. Kreuzberg'de sokak yemekleri.</li>
+                <li><strong>Ekstra Günler (23-28 Ağustos):</strong> Potsdam Sarayı (bahçeler, tarih) veya Sachsenhausen anıtı. Akşamları açık hava sineması.</li>
+            </ul>
+        </section>
+
+        <!-- Toplu Taşıma -->
+        <section class="bg-white rounded-lg p-6 mb-8 shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-900 mb-4">Toplu Taşıma Bilgileri</h2>
+            <p class="mb-4">GLS Campus, Prenzlauer Berg'de (U2 hattı, Eberswalder Straße istasyonu). Berlin BVG sistemi kullanılır. Fiyatlar 2025 itibarıyla (AB zone, şehir içi).</p>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-3">Bilet Türü</th>
+                        <th class="p-3">Açıklama</th>
+                        <th class="p-3">Ücret</th>
+                        <th class="p-3">Satın Alma</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="p-3">Tek Seferlik</td>
+                        <td class="p-3">2 saat, sınırsız transfer.</td>
+                        <td class="p-3">€3.80</td>
+                        <td class="p-3">Otomat, BVG app, sürücü.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3">Kısa Mesafe</td>
+                        <td class="p-3">3 durak U/S-Bahn, 6 durak tram/otobüs.</td>
+                        <td class="p-3">€2.60</td>
+                        <td class="p-3">Otomat, app.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3">Günlük</td>
+                        <td class="p-3">24 saat sınırsız.</td>
+                        <td class="p-3">€9.50</td>
+                        <td class="p-3">Otomat, app.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3">Haftalık</td>
+                        <td class="p-3">7 gün sınırsız.</td>
+                        <td class="p-3">€36</td>
+                        <td class="p-3">Otomat, app, abonelik.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3">Aylık (Deutschlandticket)</td>
+                        <td class="p-3">Almanya genelinde sınırsız.</td>
+                        <td class="p-3">€58</td>
+                        <td class="p-3">App, online abonelik.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mt-4"><strong>Diğer Seçenekler:</strong></p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Taksi:</strong> Şehir merkezine €10-20 (6-10 km). Başlangıç €3.90 + €2/km. App: Free Now, Uber.</li>
+                <li><strong>Alternatifler:</strong> Bisiklet (Nextbike, €1/30 dk), scooter (Tier/Lime, €1 + €0.20/dk), araç paylaşımı (Share Now, €0.19/dk).</li>
+            </ul>
+        </section>
+
+        <!-- Almanca Cümleler -->
+        <section class="bg-white rounded-lg p-6 mb-8 shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-900 mb-4">Pratik Almanca Cümleler</h2>
+            <p class="mb-4">Bilet alma ve yön sorma için temel ifadeler (telaffuz parantez içinde).</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>"Ein Ticket nach [yer] bitte." (Ayn tiket nah [yer] bit-te) - Bir bilet [yere] lütfen.</li>
+                <li>"Was kostet das?" (Vas kos-tet das?) - Bu ne kadar?</li>
+                <li>"Ein Tagesticket bitte." (Ayn tah-ges-tik-et bit-te) - Bir günlük bilet lütfen.</li>
+                <li>"Wo ist der [istasyon/yer]?" (Vo ist der [istasyon/yer]?) - [İstasyon/yer] nerede?</li>
+                <li>"Entschuldigung, sprechen Sie Englisch?" (Ent-shul-di-gung, shp-re-hen zee eng-lish?) - Affedersiniz, İngilizce konuşuyor musunuz?</li>
+                <li>"Danke schön." (Dan-ke şön) - Teşekkür ederim.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Hava durumu verisi için dinamik alan (örnek API kullanımı)
+        async function fetchWeather() {
+            try {
+                // Gerçek API kullanılamadığından örnek veri
+                const weatherData = {
+                    temperature: "22-25°C",
+                    condition: "Güneşli, ara sıra yağmur",
+                    advice: "Hafif giysiler ve yağmurluk önerilir."
+                };
+                document.getElementById('weather-data').innerHTML = `
+                    <p><strong>Güncel:</strong> ${weatherData.temperature}, ${weatherData.condition}</p>
+                    <p><strong>Öneri:</strong> ${weatherData.advice}</p>
+                `;
+            } catch (error) {
+                document.getElementById('weather-data').innerHTML = '<p>Hava durumu verisi alınamadı.</p>';
+            }
+        }
+        window.onload = fetchWeather;
+    </script>
+</body>
+</html>
