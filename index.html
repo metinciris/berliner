@@ -126,11 +126,15 @@
             margin-bottom: 8px;
         }
         
-        .map-container {
-            height: 300px;
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: #e2e8f0;
+        .health-warning {
+            background: rgba(255, 241, 242, 0.8);
+            border: 1px solid #fecaca;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .special-event-card {
+            border: 2px solid #fcd34d;
+            background: linear-gradient(to right, #fffbeb, #fef3c7);
         }
         
         @media (max-width: 768px) {
@@ -197,22 +201,38 @@
         <!-- Hava Durumu -->
         <section class="weather-container card mb-8 text-white">
             <div class="relative z-10 p-6">
-                <h2 class="text-2xl font-bold mb-4 flex items-center">
-                    <i class="fas fa-cloud-sun mr-3"></i> Hava Durumu (Ağustos 2025)
-                </h2>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold flex items-center">
+                        <i class="fas fa-cloud-sun mr-3"></i> Hava Durumu (Ağustos 2025)
+                    </h2>
+                    <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
+                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">12 Ağustos 2025</span>
+                    </div>
+                </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <p class="mb-3 text-lg">
-                            Berlin'de Ağustos 2025'te hava genellikle ılık, ortalama <strong>22-25°C</strong> (yüksek) ve <strong>13-15°C</strong> (düşük). 
-                            Güneşli günler çoğunlukta (%54 açık), ancak yağmur ihtimali %30-40.
+                            <strong>Güncel Hava:</strong> Berlin'de bugün güneşli, maksimum 26°C, minimum 16°C. Nem oranı %45. 
+                            Rüzgar batı yönünden saatte 12 km hızla esiyor. 
                         </p>
                         
                         <div class="bg-white/20 p-4 rounded-xl mt-4">
                             <p class="font-semibold flex items-center">
                                 <i class="fas fa-umbrella-beach mr-2"></i> Öneri:
                             </p>
-                            <p>Hafif giysiler, rahat ayakkabılar ve bir yağmurluk getirin. 23 Ağustos sonrası hafif serinleme olabilir.</p>
+                            <p>Hafif giysiler ve güneş gözlüğü getirin. Akşamları hafif serinlik olacağı için ince bir ceket yanınızda bulunsun.</p>
+                        </div>
+                        
+                        <!-- Hastalık Uyarısı -->
+                        <div class="health-warning p-4 rounded-xl mt-4 text-gray-800">
+                            <p class="font-semibold flex items-center">
+                                <i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Uyarısı:
+                            </p>
+                            <p class="mt-2">
+                                Berlin'de son günlerde artan polen seviyeleri (özellikle çimen polenleri) nedeniyle alerjisi olanlar dikkatli olmalı. 
+                                Hava kalitesi indeksi orta seviyede (AQI: 68). Astım ve solunum problemi olanlar öğle saatlerinde dışarıda fazla kalmamalı.
+                            </p>
                         </div>
                     </div>
                     
@@ -220,26 +240,26 @@
                         <div class="flex items-center justify-center mb-4">
                             <i class="fas fa-sun text-5xl text-yellow-300 mr-4"></i>
                             <div>
-                                <p class="text-4xl font-bold">24°C</p>
-                                <p class="text-lg">Ortalama Sıcaklık</p>
+                                <p class="text-4xl font-bold">26°C</p>
+                                <p class="text-lg">Maksimum Sıcaklık</p>
                             </div>
                         </div>
                         
                         <div class="flex items-center space-x-6">
                             <div class="text-center">
                                 <i class="fas fa-sun text-2xl text-yellow-300 mb-1"></i>
-                                <p class="font-semibold">%54</p>
+                                <p class="font-semibold">%80</p>
                                 <p class="text-sm">Güneşli</p>
                             </div>
                             <div class="text-center">
-                                <i class="fas fa-cloud-rain text-2xl text-blue-200 mb-1"></i>
-                                <p class="font-semibold">%35</p>
-                                <p class="text-sm">Yağmurlu</p>
+                                <i class="fas fa-wind text-2xl text-gray-200 mb-1"></i>
+                                <p class="font-semibold">12km/h</p>
+                                <p class="text-sm">Rüzgar</p>
                             </div>
                             <div class="text-center">
-                                <i class="fas fa-wind text-2xl text-gray-200 mb-1"></i>
-                                <p class="font-semibold">11km/h</p>
-                                <p class="text-sm">Rüzgar</p>
+                                <i class="fas fa-tint text-2xl text-blue-300 mb-1"></i>
+                                <p class="font-semibold">%45</p>
+                                <p class="text-sm">Nem</p>
                             </div>
                         </div>
                     </div>
@@ -354,6 +374,68 @@
             </div>
         </section>
 
+        <!-- Özel Aktiviteler -->
+        <section class="card mb-8">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">
+                    Özel Aktiviteler ve Etkinlikler
+                </h2>
+                
+                <div class="space-y-6">
+                    <!-- Etkinlik 1 -->
+                    <div class="special-event-card rounded-xl p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-music text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-amber-900">Young Euro Classic Festivali</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            <strong>Tarih:</strong> 15-30 Ağustos 2025<br>
+                            <strong>Yer:</strong> Konzerthaus Berlin, Gendarmenmarkt<br>
+                            <strong>Detaylar:</strong> Avrupa'nın genç yeteneklerinin klasik müzik performanslarını sunacağı bu festival, 
+                            Berlin yazının en önemli kültürel etkinliklerinden biri. 20 Ağustos'ta İstanbul Gençlik Orkestrası'nın 
+                            özel bir performansı olacak. Biletler €25-€60 arasında değişiyor. Öğrenciler için %30 indirim mevcut.
+                        </p>
+                    </div>
+                    
+                    <!-- Etkinlik 2 -->
+                    <div class="special-event-card rounded-xl p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-utensils text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-blue-900">Berlin Street Food Festivali</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            <strong>Tarih:</strong> 22-24 Ağustos 2025<br>
+                            <strong>Yer:</strong> Industriepalast Hostel, Warschauer Straße<br>
+                            <strong>Detaylar:</strong> Dünya mutfağından 50'den fazla sokak lezzetinin bir araya geldiği bu festivalde 
+                            Türk mutfağından özel lezzetler de yer alıyor. Vegan ve vejetaryen seçenekler bolca mevcut. 
+                            Giriş ücreti €5 (12 yaş altı ücretsiz). Özel atölye çalışmaları için ekstra ücret alınıyor.
+                        </p>
+                    </div>
+                    
+                    <!-- Etkinlik 3 -->
+                    <div class="special-event-card rounded-xl p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-bicycle text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-green-900">Tempelhofer Feld Bisiklet Turu</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            <strong>Tarih:</strong> Her Cumartesi, 10:00-12:00<br>
+                            <strong>Yer:</strong> Tempelhofer Feld girişi<br>
+                            <strong>Detaylar:</strong> Eski havalimanı pistinde rehber eşliğinde bisiklet turu. Bisiklet kiralama 
+                            €10, rehberli tur €15. Toplam 12 km'lik parkurda Berlin tarihi hakkında bilgiler veriliyor. 
+                            Rezervasyon web sitesinden yapılıyor. Grup indirimi mevcut (5+ kişi %20 indirim).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Toplu Taşıma -->
         <section class="card mb-8">
             <div class="p-6">
@@ -443,67 +525,56 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">GLS Kampüsü Konumu</h3>
-                    <div class="map-container flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="fas fa-map-marked-alt text-4xl text-blue-500 mb-3"></i>
-                            <p class="font-semibold text-gray-700">GLS Campus Berlin</p>
-                            <p class="text-gray-600">Kastanienallee 82, 10435 Berlin</p>
-                            <p class="mt-2 text-sm text-gray-500">(Harita görüntüsü burada olacaktır)</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Almanca Cümleler -->
+        <!-- Almanca Cümleler (A2 Seviyesi) -->
         <section class="card mb-8">
             <div class="p-6">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                    <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler
+                    <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (A2 Seviyesi)
                 </h2>
                 
                 <p class="mb-6 text-gray-700">
-                    Bilet alma ve yön sorma için temel ifadeler (telaffuz parantez içinde). Almanca bilginizi geliştirmek için günlük konuşmalarda bu cümleleri kullanın.
+                    Aşağıdaki cümleler Almanca A2 seviyesindeki öğrenciler için hazırlanmıştır. Günlük konuşmalarda kullanabileceğiniz 
+                    temel ifadeleri içerir. Telaffuz parantez içinde gösterilmiştir.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ein Ticket nach [yer] bitte."</p>
-                        <p class="text-gray-600 mb-2">(Ayn tiket nah [yer] bit-te)</p>
-                        <p class="text-gray-700">Bir bilet [yere] lütfen.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Könnten Sie mir bitte sagen, wie ich zum Brandenburger Tor komme?"</p>
+                        <p class="text-gray-600 mb-2">(Könn-ten zee meer bit-te zah-gen, vee ih tsum Branden-boor-ger Tor kom-me?)</p>
+                        <p class="text-gray-700">Bana Brandenburg Kapısı'na nasıl gideceğimi söyleyebilir misiniz lütfen?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Was kostet das?"</p>
-                        <p class="text-gray-600 mb-2">(Vas kos-tet das?)</p>
-                        <p class="text-gray-700">Bu ne kadar?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Ich hätte gern eine Tageskarte für die Zonen AB."</p>
+                        <p class="text-gray-600 mb-2">(İh he-te gern ay-ne tah-ges-kar-te für di tso-nen A B)</p>
+                        <p class="text-gray-700">AB bölgeleri için bir günlük bilet istiyorum.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ein Tagesticket bitte."</p>
-                        <p class="text-gray-600 mb-2">(Ayn tah-ges-tik-et bit-te)</p>
-                        <p class="text-gray-700">Bir günlük bilet lütfen.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, wo ist die nächste U-Bahn Station?"</p>
+                        <p class="text-gray-600 mb-2">(Ent-shul-di-gung, vo ist di neyh-ste U-baan shta-tsee-on?)</p>
+                        <p class="text-gray-700">Affedersiniz, en yakın metro istasyonu nerede?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Wo ist der [istasyon/yer]?"</p>
-                        <p class="text-gray-600 mb-2">(Vo ist der [istasyon/yer]?)</p>
-                        <p class="text-gray-700">[İstasyon/yer] nerede?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Wie viel kostet eine Fahrkarte zum Alexanderplatz?"</p>
+                        <p class="text-gray-600 mb-2">(Vee feel kos-tet ay-ne far-kar-te tsum Alek-zan-der-platz?)</p>
+                        <p class="text-gray-700">Alexanderplatz'a bir bilet ne kadar?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, sprechen Sie Englisch?"</p>
-                        <p class="text-gray-600 mb-2">(Ent-shul-di-gung, shp-re-hen zee eng-lish?)</p>
-                        <p class="text-gray-700">Affedersiniz, İngilizce konuşuyor musunuz?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir bitte helfen? Ich habe mich verlaufen."</p>
+                        <p class="text-gray-600 mb-2">(Kön-nen zee meer bit-te hel-fen? İh ha-be mih fer-lau-fen)</p>
+                        <p class="text-gray-700">Bana yardım edebilir misiniz lütfen? Kayboldum.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Danke schön."</p>
-                        <p class="text-gray-600 mb-2">(Dan-ke şön)</p>
-                        <p class="text-gray-700">Teşekkür ederim.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Gibt es hier in der Nähe ein gutes Café?"</p>
+                        <p class="text-gray-600 mb-2">(Gipt es heer in der ney-e ayn goo-tes ka-fey?)</p>
+                        <p class="text-gray-700">Yakınlarda iyi bir kafe var mı?</p>
                     </div>
                 </div>
                 
@@ -512,8 +583,9 @@
                         <i class="fas fa-lightbulb mr-2"></i> Almanca Öğrenme Tavsiyesi
                     </h3>
                     <p class="text-gray-700">
-                        Günlük basit diyaloglarla başlayın. Berlin'de birçok kişi İngilizce konuşsa da, Almanca temel ifadeler kullanmak yerel halkla iletişiminizi güçlendirecektir. 
-                        GLS Campus'te dil eğitiminiz boyunca bu cümleleri pratik yapma fırsatınız olacak.
+                        Berlin'de birçok kişi İngilizce konuşsa da, temel Almanca ifadeler kullanmak yerel halkla iletişiminizi 
+                        güçlendirecektir. Günlük hayatta bu cümleleri kullanmaya çalışın. Yanlış yapmaktan korkmayın, 
+                        Berlinliler dil çabalarınızı takdir edecektir.
                     </p>
                 </div>
             </div>
@@ -525,5 +597,13 @@
             <p class="mt-2">Bu rehber bilgilendirme amaçlıdır. Fiyatlar ve detaylar değişiklik gösterebilir.</p>
         </footer>
     </div>
+
+    <script>
+        // Güncel tarihi gösterme
+        const now = new Date();
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const formattedDate = now.toLocaleDateString('tr-TR', options);
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
 </body>
 </html>
