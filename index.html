@@ -137,6 +137,19 @@
             background: linear-gradient(to right, #fffbeb, #fef3c7);
         }
         
+        .weather-day {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .weather-day:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
         @media (max-width: 768px) {
             .section-title::after {
                 width: 40px;
@@ -151,6 +164,19 @@
                 padding: 5px 12px;
                 font-size: 0.8rem;
             }
+            
+            .weather-forecast {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .weather-day {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+                padding: 12px;
+            }
         }
         
         .pulse {
@@ -161,6 +187,16 @@
             0% { opacity: 0.6; }
             50% { opacity: 1; }
             100% { opacity: 0.6; }
+        }
+        
+        .shopping-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #bbf7d0;
+        }
+        
+        .education-note {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #38bdf8;
         }
     </style>
 </head>
@@ -183,16 +219,28 @@
             <div class="p-6">
                 <div class="flex flex-wrap justify-center gap-4">
                     <div class="activity-tag">
-                        <i class="fas fa-sun mr-2"></i> Hava Durumu
+                        <i class="fas fa-sun mr-1"></i> Hava Durumu
                     </div>
                     <div class="activity-tag">
-                        <i class="fas fa-map-marked-alt mr-2"></i> Gezi Rehberi
+                        <i class="fas fa-map-marked-alt mr-1"></i> Gezi Rehberi
                     </div>
                     <div class="activity-tag">
-                        <i class="fas fa-subway mr-2"></i> Ulaşım Bilgileri
+                        <i class="fas fa-subway mr-1"></i> Ulaşım
                     </div>
                     <div class="activity-tag">
-                        <i class="fas fa-language mr-2"></i> Almanca Cümleler
+                        <i class="fas fa-language mr-1"></i> Almanca
+                    </div>
+                    <div class="activity-tag">
+                        <i class="fas fa-shopping-basket mr-1"></i> Alışveriş
+                    </div>
+                </div>
+                
+                <!-- Eğitim Devam Notu -->
+                <div class="education-note mt-6 p-4 rounded-lg flex items-start">
+                    <i class="fas fa-user-graduate text-blue-500 text-xl mt-1 mr-3"></i>
+                    <div>
+                        <p class="font-semibold text-blue-800">Dil Eğitimi Devam Ediyor</p>
+                        <p class="text-gray-700 mt-1">GLS Campus Berlin'de Almanca eğitiminiz devam etmektedir. Ders programınıza uygun aktiviteler seçmeyi unutmayın.</p>
                     </div>
                 </div>
             </div>
@@ -203,65 +251,80 @@
             <div class="relative z-10 p-6">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-2xl font-bold flex items-center">
-                        <i class="fas fa-cloud-sun mr-3"></i> Hava Durumu (Ağustos 2025)
+                        <i class="fas fa-cloud-sun mr-3"></i> 5 Günlük Hava Durumu
                     </h2>
                     <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
-                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">12 Ağustos 2025</span>
+                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">14 Ağustos 2025</span>
+                    </div>
+                </div>
+                
+                <!-- 5 Günlük Hava Durumu Banner -->
+                <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">Bugün</p>
+                        <i class="fas fa-sun text-3xl my-2 text-yellow-300"></i>
+                        <p class="text-xl font-bold">26°C</p>
+                        <p class="text-sm opacity-90">16°C</p>
+                        <p class="mt-1 text-sm">Güneşli</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">Yarın</p>
+                        <i class="fas fa-cloud-sun text-3xl my-2 text-yellow-200"></i>
+                        <p class="text-xl font-bold">24°C</p>
+                        <p class="text-sm opacity-90">17°C</p>
+                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">16 Ağu</p>
+                        <i class="fas fa-cloud text-3xl my-2 text-gray-300"></i>
+                        <p class="text-xl font-bold">22°C</p>
+                        <p class="text-sm opacity-90">16°C</p>
+                        <p class="mt-1 text-sm">Bulutlu</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">17 Ağu</p>
+                        <i class="fas fa-cloud-showers-heavy text-3xl my-2 text-blue-200"></i>
+                        <p class="text-xl font-bold">20°C</p>
+                        <p class="text-sm opacity-90">15°C</p>
+                        <p class="mt-1 text-sm">Yağmurlu</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">18 Ağu</p>
+                        <i class="fas fa-cloud-sun text-3xl my-2 text-orange-200"></i>
+                        <p class="text-xl font-bold">23°C</p>
+                        <p class="text-sm opacity-90">16°C</p>
+                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <p class="mb-3 text-lg">
-                            <strong>Güncel Hava:</strong> Berlin'de bugün güneşli, maksimum 26°C, minimum 16°C. Nem oranı %45. 
-                            Rüzgar batı yönünden saatte 12 km hızla esiyor. 
+                            <strong>Hava Durumu Özeti:</strong> Berlin'de önümüzdeki 5 günde hava genellikle ılıman. 
+                            17 Ağustos'ta yağmur bekleniyor. Sıcaklıklar 20-26°C arasında değişecek.
                         </p>
                         
                         <div class="bg-white/20 p-4 rounded-xl mt-4">
                             <p class="font-semibold flex items-center">
-                                <i class="fas fa-umbrella-beach mr-2"></i> Öneri:
+                                <i class="fas fa-umbrella-beach mr-2"></i> Öneriler:
                             </p>
-                            <p>Hafif giysiler ve güneş gözlüğü getirin. Akşamları hafif serinlik olacağı için ince bir ceket yanınızda bulunsun.</p>
-                        </div>
-                        
-                        <!-- Hastalık Uyarısı -->
-                        <div class="health-warning p-4 rounded-xl mt-4 text-gray-800">
-                            <p class="font-semibold flex items-center">
-                                <i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Uyarısı:
-                            </p>
-                            <p class="mt-2">
-                                Berlin'de son günlerde artan polen seviyeleri (özellikle çimen polenleri) nedeniyle alerjisi olanlar dikkatli olmalı. 
-                                Hava kalitesi indeksi orta seviyede (AQI: 68). Astım ve solunum problemi olanlar öğle saatlerinde dışarıda fazla kalmamalı.
-                            </p>
+                            <p>15-16 Ağustos için açık hava aktiviteleri planlayabilirsiniz. 17 Ağustos'ta yağmura karşı şemsiye veya yağmurluk getirmeyi unutmayın.</p>
                         </div>
                     </div>
                     
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="flex items-center justify-center mb-4">
-                            <i class="fas fa-sun text-5xl text-yellow-300 mr-4"></i>
-                            <div>
-                                <p class="text-4xl font-bold">26°C</p>
-                                <p class="text-lg">Maksimum Sıcaklık</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-6">
-                            <div class="text-center">
-                                <i class="fas fa-sun text-2xl text-yellow-300 mb-1"></i>
-                                <p class="font-semibold">%80</p>
-                                <p class="text-sm">Güneşli</p>
-                            </div>
-                            <div class="text-center">
-                                <i class="fas fa-wind text-2xl text-gray-200 mb-1"></i>
-                                <p class="font-semibold">12km/h</p>
-                                <p class="text-sm">Rüzgar</p>
-                            </div>
-                            <div class="text-center">
-                                <i class="fas fa-tint text-2xl text-blue-300 mb-1"></i>
-                                <p class="font-semibold">%45</p>
-                                <p class="text-sm">Nem</p>
-                            </div>
-                        </div>
+                    <!-- Hastalık Uyarısı -->
+                    <div class="health-warning p-4 rounded-xl text-gray-800">
+                        <p class="font-semibold flex items-center">
+                            <i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Uyarısı:
+                        </p>
+                        <p class="mt-2">
+                            Berlin'de artan polen seviyeleri (özellikle çimen polenleri) nedeniyle alerjisi olanlar dikkatli olmalı. 
+                            Hava kalitesi indeksi orta seviyede (AQI: 68). Astım ve solunum problemi olanlar öğle saatlerinde dışarıda fazla kalmamalı.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -279,7 +342,7 @@
                     23 Ağustos sonrası 3-5 gün için günübirlik geziler eklendi.
                 </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Prenzlauer Berg -->
                     <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
                         <div class="flex items-center mb-4">
@@ -369,6 +432,27 @@
                                 <i class="fas fa-film mr-1"></i> Açık Hava Sineması
                             </span>
                         </div>
+                    </div>
+                    
+                    <!-- Yakın Alışveriş Yerleri -->
+                    <div class="shopping-card rounded-xl p-5">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mr-3">
+                                <i class="fas fa-shopping-basket text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-green-900">Yakın Alışveriş Yerleri</h3>
+                        </div>
+                        <p class="text-gray-700 mb-3">
+                            <i class="fas fa-map-marker-alt text-green-600 mr-2"></i> 
+                            GLS Campus çevresindeki küçük dükkanlar ve marketler:
+                        </p>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2 mt-3">
+                            <li><strong>BioCompany</strong> (Eberswalder Str. 26) - Organik ürünler</li>
+                            <li><strong>Kaufland</strong> (Schönhauser Allee 80) - Süpermarket</li>
+                            <li><strong>Edeka Center</strong> (Danziger Str. 15) - Taze gıdalar</li>
+                            <li><strong>Backwerk</strong> (Schönhauser Allee 76A) - Fırın</li>
+                            <li><strong>KiezKaufhaus</strong> (Kastanienallee 85) - Günlük ihtiyaçlar</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -537,44 +621,38 @@
                 
                 <p class="mb-6 text-gray-700">
                     Aşağıdaki cümleler Almanca A2 seviyesindeki öğrenciler için hazırlanmıştır. Günlük konuşmalarda kullanabileceğiniz 
-                    temel ifadeleri içerir. Telaffuz parantez içinde gösterilmiştir.
+                    temel ifadeleri içerir.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Könnten Sie mir bitte sagen, wie ich zum Brandenburger Tor komme?"</p>
-                        <p class="text-gray-600 mb-2">(Könn-ten zee meer bit-te zah-gen, vee ih tsum Branden-boor-ger Tor kom-me?)</p>
-                        <p class="text-gray-700">Bana Brandenburg Kapısı'na nasıl gideceğimi söyleyebilir misiniz lütfen?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, wo ist der nächste Supermarkt?"</p>
+                        <p class="text-gray-700">Affedersiniz, en yakın süpermarket nerede?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich hätte gern eine Tageskarte für die Zonen AB."</p>
-                        <p class="text-gray-600 mb-2">(İh he-te gern ay-ne tah-ges-kar-te für di tso-nen A B)</p>
-                        <p class="text-gray-700">AB bölgeleri için bir günlük bilet istiyorum.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Ich hätte gern eine Fahrkarte nach Mitte, bitte."</p>
+                        <p class="text-gray-700">Mitte'ye bir bilet istiyorum lütfen.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, wo ist die nächste U-Bahn Station?"</p>
-                        <p class="text-gray-600 mb-2">(Ent-shul-di-gung, vo ist di neyh-ste U-baan shta-tsee-on?)</p>
-                        <p class="text-gray-700">Affedersiniz, en yakın metro istasyonu nerede?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir sagen, wie spät es ist?"</p>
+                        <p class="text-gray-700">Bana saatin kaç olduğunu söyleyebilir misiniz?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Wie viel kostet eine Fahrkarte zum Alexanderplatz?"</p>
-                        <p class="text-gray-600 mb-2">(Vee feel kos-tet ay-ne far-kar-te tsum Alek-zan-der-platz?)</p>
-                        <p class="text-gray-700">Alexanderplatz'a bir bilet ne kadar?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Wie komme ich zum Brandenburger Tor?"</p>
+                        <p class="text-gray-700">Brandenburg Kapısı'na nasıl gidebilirim?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir bitte helfen? Ich habe mich verlaufen."</p>
-                        <p class="text-gray-600 mb-2">(Kön-nen zee meer bit-te hel-fen? İh ha-be mih fer-lau-fen)</p>
-                        <p class="text-gray-700">Bana yardım edebilir misiniz lütfen? Kayboldum.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Was kostet das?"</p>
+                        <p class="text-gray-700">Bu ne kadar?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Gibt es hier in der Nähe ein gutes Café?"</p>
-                        <p class="text-gray-600 mb-2">(Gipt es heer in der ney-e ayn goo-tes ka-fey?)</p>
-                        <p class="text-gray-700">Yakınlarda iyi bir kafe var mı?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Ich verstehe nicht. Können Sie das bitte wiederholen?"</p>
+                        <p class="text-gray-700">Anlamadım. Bunu lütfen tekrar edebilir misiniz?</p>
                     </div>
                 </div>
                 
