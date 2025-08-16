@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Aktiviteleri ve Rehberi - Ağustos 2025</title>
+    <title>Berlin Aktiviteleri ve Pratik Rehberi - Ağustos 2025</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -150,6 +150,16 @@
             background: rgba(255, 255, 255, 0.3);
         }
         
+        .shopping-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #bbf7d0;
+        }
+        
+        .education-note {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #38bdf8;
+        }
+        
         @media (max-width: 768px) {
             .section-title::after {
                 width: 40px;
@@ -177,26 +187,6 @@
                 text-align: left;
                 padding: 12px;
             }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 0.6; }
-            50% { opacity: 1; }
-            100% { opacity: 0.6; }
-        }
-        
-        .shopping-card {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #bbf7d0;
-        }
-        
-        .education-note {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-left: 4px solid #38bdf8;
         }
     </style>
 </head>
@@ -240,7 +230,7 @@
                     <i class="fas fa-user-graduate text-blue-500 text-xl mt-1 mr-3"></i>
                     <div>
                         <p class="font-semibold text-blue-800">Dil Eğitimi Devam Ediyor</p>
-                        <p class="text-gray-700 mt-1">GLS Campus Berlin'de Almanca eğitiminiz devam etmektedir. Ders programınıza uygun aktiviteler seçmeyi unutmayın.</p>
+                        <p class="text-gray-700 mt-1">GLS Campus Berlin'de Almanca eğitiminiz devam etmektedir. Sosyal etkinliklere ve rahat gezilere odaklanın. Ders programınıza uygun aktiviteler seçmeyi unutmayın.</p>
                     </div>
                 </div>
             </div>
@@ -254,30 +244,14 @@
                         <i class="fas fa-cloud-sun mr-3"></i> 5 Günlük Hava Durumu
                     </h2>
                     <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
-                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">14 Ağustos 2025</span>
+                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">16 Ağustos 2025</span>
                     </div>
                 </div>
                 
                 <!-- 5 Günlük Hava Durumu Banner -->
                 <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
                     <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">Bugün</p>
-                        <i class="fas fa-sun text-3xl my-2 text-yellow-300"></i>
-                        <p class="text-xl font-bold">26°C</p>
-                        <p class="text-sm opacity-90">16°C</p>
-                        <p class="mt-1 text-sm">Güneşli</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">Yarın</p>
-                        <i class="fas fa-cloud-sun text-3xl my-2 text-yellow-200"></i>
-                        <p class="text-xl font-bold">24°C</p>
-                        <p class="text-sm opacity-90">17°C</p>
-                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">16 Ağu</p>
+                        <p class="font-semibold">Bugün (16 Ağu)</p>
                         <i class="fas fa-cloud text-3xl my-2 text-gray-300"></i>
                         <p class="text-xl font-bold">22°C</p>
                         <p class="text-sm opacity-90">16°C</p>
@@ -285,8 +259,8 @@
                     </div>
                     
                     <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">17 Ağu</p>
-                        <i class="fas fa-cloud-showers-heavy text-3xl my-2 text-blue-200"></i>
+                        <p class="font-semibold">Yarın (17 Ağu)</p>
+                        <i class="fas fa-cloud-rain text-3xl my-2 text-blue-200"></i>
                         <p class="text-xl font-bold">20°C</p>
                         <p class="text-sm opacity-90">15°C</p>
                         <p class="mt-1 text-sm">Yağmurlu</p>
@@ -294,9 +268,25 @@
                     
                     <div class="weather-day flex-1 min-w-[150px]">
                         <p class="font-semibold">18 Ağu</p>
-                        <i class="fas fa-cloud-sun text-3xl my-2 text-orange-200"></i>
+                        <i class="fas fa-cloud-sun text-3xl my-2 text-yellow-200"></i>
                         <p class="text-xl font-bold">23°C</p>
                         <p class="text-sm opacity-90">16°C</p>
+                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">19 Ağu</p>
+                        <i class="fas fa-sun text-3xl my-2 text-yellow-300"></i>
+                        <p class="text-xl font-bold">24°C</p>
+                        <p class="text-sm opacity-90">17°C</p>
+                        <p class="mt-1 text-sm">Güneşli</p>
+                    </div>
+                    
+                    <div class="weather-day flex-1 min-w-[150px]">
+                        <p class="font-semibold">20 Ağu</p>
+                        <i class="fas fa-cloud-sun text-3xl my-2 text-orange-200"></i>
+                        <p class="text-xl font-bold">25°C</p>
+                        <p class="text-sm opacity-90">18°C</p>
                         <p class="mt-1 text-sm">Parçalı Bulutlu</p>
                     </div>
                 </div>
@@ -304,15 +294,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <p class="mb-3 text-lg">
-                            <strong>Hava Durumu Özeti:</strong> Berlin'de önümüzdeki 5 günde hava genellikle ılıman. 
-                            17 Ağustos'ta yağmur bekleniyor. Sıcaklıklar 20-26°C arasında değişecek.
+                            <strong>Hava Durumu Özeti:</strong> Berlin'de önümüzdeki 5 günde hava genellikle ılıman. 17 Ağustos'ta yağmur bekleniyor. Sıcaklıklar 20-25°C arasında değişecek.
                         </p>
                         
                         <div class="bg-white/20 p-4 rounded-xl mt-4">
                             <p class="font-semibold flex items-center">
                                 <i class="fas fa-umbrella-beach mr-2"></i> Öneriler:
                             </p>
-                            <p>15-16 Ağustos için açık hava aktiviteleri planlayabilirsiniz. 17 Ağustos'ta yağmura karşı şemsiye veya yağmurluk getirmeyi unutmayın.</p>
+                            <p>Bugün (bulutlu) ve 18-20 Ağustos için kapalı alan aktiviteleri veya hafif geziler planlayın. 17 Ağustos'ta yağmura karşı şemsiye veya yağmurluk getirin; iç mekan etkinlikleri tercih edin (müzeler, kafeler).</p>
                         </div>
                     </div>
                     
@@ -338,8 +327,7 @@
                 </h2>
                 
                 <p class="mb-6 text-gray-700">
-                    Dil okulu dışı zamanlarda (öğleden sonra, akşamlar, hafta sonları) öneriler. Prenzlauer Berg, genç ve canlı bir bölge. 
-                    23 Ağustos sonrası 3-5 gün için günübirlik geziler eklendi.
+                    Dil okulu dışı zamanlarda (öğleden sonra, akşamlar, hafta sonları) öneriler. Brandenburg Kapısı ve East Side Gallery'yi zaten gezdiniz, bu yüzden yeni yerlere odaklanın. Prenzlauer Berg, genç ve canlı bir bölge - 25 yaşında bir kadın için ideal kafeler ve sosyal ortamlar. Hava koşullarına göre güncellendi: Bulutlu günlerde iç mekan, güneşli günlerde dış mekan. 23 Ağustos sonrası 3-5 gün için günübirlik geziler eklendi.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -353,7 +341,7 @@
                         </div>
                         <p class="text-gray-700 mb-3">
                             <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> 
-                            Kastanienallee'de kafeler, Mauerpark'ta pazar ve karaoke (Pazar günleri). Akşam barlarda sosyalleşme.
+                            Kastanienallee'de kafeler, Mauerpark'ta pazar ve karaoke (Pazar günleri). Akşam barlarda sosyalleşme - arkadaş edinmek için harika.
                         </p>
                         <div class="flex flex-wrap mt-3">
                             <span class="activity-tag">
@@ -374,11 +362,11 @@
                             <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center mr-3">
                                 <i class="fas fa-monument text-white text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-amber-900">Şehir Merkezi</h3>
+                            <h3 class="text-xl font-semibold text-amber-900">Şehir Merkezi (Güncellenmiş)</h3>
                         </div>
                         <p class="text-gray-700 mb-3">
                             <i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> 
-                            Brandenburg Kapısı, Berlin Duvarı, Reichstag (ücretsiz, rezervasyon gerekli). Tiergarten'da piknik.
+                            Reichstag (ücretsiz, rezervasyon gerekli). Tiergarten'da piknik - güneşli günlerde ideal (19-20 Ağu). Kreuzberg'e geçin: Sokak sanatı ve hipster kafeler.
                         </p>
                         <div class="flex flex-wrap mt-3">
                             <span class="activity-tag bg-amber-100 text-amber-800">
@@ -386,6 +374,9 @@
                             </span>
                             <span class="activity-tag bg-amber-100 text-amber-800">
                                 <i class="fas fa-tree mr-1"></i> Tiergarten
+                            </span>
+                            <span class="activity-tag bg-amber-100 text-amber-800">
+                                <i class="fas fa-paint-brush mr-1"></i> Sokak Sanatı
                             </span>
                         </div>
                     </div>
@@ -400,7 +391,7 @@
                         </div>
                         <p class="text-gray-700 mb-3">
                             <i class="fas fa-map-marker-alt text-purple-500 mr-2"></i> 
-                            Museum Island (200. yıl kutlamaları), Pergamon Müzesi. Festivaller: Tanz im August, Young Euro Classic.
+                            Museum Island (200. yıl kutlamaları), Pergamon Müzesi - yağmurlu günlerde mükemmel (17 Ağu). Festivaller: Tanz im August, Young Euro Classic. Neukölln'de yoga seansları ekleyin (genç kadınlar için rahatlatıcı).
                         </p>
                         <div class="flex flex-wrap mt-3">
                             <span class="activity-tag bg-purple-100 text-purple-800">
@@ -408,6 +399,9 @@
                             </span>
                             <span class="activity-tag bg-purple-100 text-purple-800">
                                 <i class="fas fa-music mr-1"></i> Festivaller
+                            </span>
+                            <span class="activity-tag bg-purple-100 text-purple-800">
+                                <i class="fas fa-spa mr-1"></i> Yoga
                             </span>
                         </div>
                     </div>
@@ -422,7 +416,7 @@
                         </div>
                         <p class="text-gray-700 mb-3">
                             <i class="fas fa-map-marker-alt text-green-500 mr-2"></i> 
-                            Potsdam Sarayı (bahçeler, tarih) veya Sachsenhausen anıtı. Akşamları açık hava sineması.
+                            Potsdam Sarayı (bahçeler, tarih) veya Sachsenhausen anıtı. Akşamları açık hava sineması. Spree nehri tekne turu ekleyin - romantik ve dinlendirici.
                         </p>
                         <div class="flex flex-wrap mt-3">
                             <span class="activity-tag bg-green-100 text-green-800">
@@ -430,6 +424,9 @@
                             </span>
                             <span class="activity-tag bg-green-100 text-green-800">
                                 <i class="fas fa-film mr-1"></i> Açık Hava Sineması
+                            </span>
+                            <span class="activity-tag bg-green-100 text-green-800">
+                                <i class="fas fa-ship mr-1"></i> Tekne Turu
                             </span>
                         </div>
                     </div>
@@ -444,14 +441,15 @@
                         </div>
                         <p class="text-gray-700 mb-3">
                             <i class="fas fa-map-marker-alt text-green-600 mr-2"></i> 
-                            GLS Campus çevresindeki küçük dükkanlar ve marketler:
+                            GLS Campus çevresindeki küçük dükkanlar ve marketler (genç kadınlar için kozmetik ve moda odaklı):
                         </p>
                         <ul class="text-gray-700 list-disc pl-5 space-y-2 mt-3">
-                            <li><strong>BioCompany</strong> (Eberswalder Str. 26) - Organik ürünler</li>
-                            <li><strong>Kaufland</strong> (Schönhauser Allee 80) - Süpermarket</li>
-                            <li><strong>Edeka Center</strong> (Danziger Str. 15) - Taze gıdalar</li>
-                            <li><strong>Backwerk</strong> (Schönhauser Allee 76A) - Fırın</li>
-                            <li><strong>KiezKaufhaus</strong> (Kastanienallee 85) - Günlük ihtiyaçlar</li>
+                            <li><strong>BioCompany</strong> (Eberswalder Str. 26) - Organik ürünler ve güzellik malzemeleri</li>
+                            <li><strong>Kaufland</strong> (Schönhauser Allee 80) - Süpermarket, uygun fiyatlı giyim</li>
+                            <li><strong>Edeka Center</strong> (Danziger Str. 15) - Taze gıdalar ve atıştırmalıklar</li>
+                            <li><strong>Backwerk</strong> (Schönhauser Allee 76A) - Fırın, kahve molası</li>
+                            <li><strong>KiezKaufhaus</strong> (Kastanienallee 85) - Günlük ihtiyaçlar ve hediyelikler</li>
+                            <li><strong>Alexanderplatz</strong> - Büyük mağazalar (H&M, Zara) için alışveriş</li>
                         </ul>
                     </div>
                 </div>
@@ -479,7 +477,7 @@
                             <strong>Yer:</strong> Konzerthaus Berlin, Gendarmenmarkt<br>
                             <strong>Detaylar:</strong> Avrupa'nın genç yeteneklerinin klasik müzik performanslarını sunacağı bu festival, 
                             Berlin yazının en önemli kültürel etkinliklerinden biri. 20 Ağustos'ta İstanbul Gençlik Orkestrası'nın 
-                            özel bir performansı olacak. Biletler €25-€60 arasında değişiyor. Öğrenciler için %30 indirim mevcut.
+                            özel bir performansı olacak. Biletler €25-€60 arasında değişiyor. Öğrenciler için %30 indirim mevcut. Müzik sever gençler için ideal.
                         </p>
                     </div>
                     
@@ -496,7 +494,7 @@
                             <strong>Yer:</strong> Industriepalast Hostel, Warschauer Straße<br>
                             <strong>Detaylar:</strong> Dünya mutfağından 50'den fazla sokak lezzetinin bir araya geldiği bu festivalde 
                             Türk mutfağından özel lezzetler de yer alıyor. Vegan ve vejetaryen seçenekler bolca mevcut. 
-                            Giriş ücreti €5 (12 yaş altı ücretsiz). Özel atölye çalışmaları için ekstra ücret alınıyor.
+                            Giriş ücreti €5 (12 yaş altı ücretsiz). Özel atölye çalışmaları için ekstra ücret alınıyor. Sosyalleşme fırsatı.
                         </p>
                     </div>
                     
@@ -513,7 +511,7 @@
                             <strong>Yer:</strong> Tempelhofer Feld girişi<br>
                             <strong>Detaylar:</strong> Eski havalimanı pistinde rehber eşliğinde bisiklet turu. Bisiklet kiralama 
                             €10, rehberli tur €15. Toplam 12 km'lik parkurda Berlin tarihi hakkında bilgiler veriliyor. 
-                            Rezervasyon web sitesinden yapılıyor. Grup indirimi mevcut (5+ kişi %20 indirim).
+                            Rezervasyon web sitesinden yapılıyor. Grup indirimi mevcut (5+ kişi %20 indirim). Güneşli günlerde önerilir (19 Ağu sonrası).
                         </p>
                     </div>
                 </div>
@@ -612,47 +610,67 @@
             </div>
         </section>
 
-        <!-- Almanca Cümleler (A2 Seviyesi) -->
+        <!-- Almanca Cümleler (B1-B2 Seviyesi) -->
         <section class="card mb-8">
             <div class="p-6">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                    <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (A2 Seviyesi)
+                    <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (B1-B2 Seviyesi)
                 </h2>
                 
                 <p class="mb-6 text-gray-700">
-                    Aşağıdaki cümleler Almanca A2 seviyesindeki öğrenciler için hazırlanmıştır. Günlük konuşmalarda kullanabileceğiniz 
-                    temel ifadeleri içerir.
+                    Aşağıdaki cümleler Almanca B1-B2 seviyesindeki öğrenciler için hazırlanmıştır. Günlük konuşmalarda kullanabileceğiniz 
+                    daha gelişmiş ifadeleri içerir. Daha fazla cümle eklendi.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, wo ist der nächste Supermarkt?"</p>
-                        <p class="text-gray-700">Affedersiniz, en yakın süpermarket nerede?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, könnten Sie mir bitte erklären, wie ich zum nächsten Supermarkt komme?"</p>
+                        <p class="text-gray-700">Affedersiniz, en yakın süpermarkete nasıl gideceğimi açıklayabilir misiniz lütfen?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich hätte gern eine Fahrkarte nach Mitte, bitte."</p>
-                        <p class="text-gray-700">Mitte'ye bir bilet istiyorum lütfen.</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Ich würde gerne eine Fahrkarte nach Mitte kaufen. Gibt es Ermäßigungen für Studenten?"</p>
+                        <p class="text-gray-700">Mitte'ye bir bilet almak istiyorum. Öğrenciler için indirim var mı?</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir sagen, wie spät es ist?"</p>
-                        <p class="text-gray-700">Bana saatin kaç olduğunu söyleyebilir misiniz?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir sagen, wie spät es ist? Ich habe meine Uhr vergessen."</p>
+                        <p class="text-gray-700">Bana saatin kaç olduğunu söyleyebilir misiniz? Saatimi unuttum.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Wie komme ich zum Brandenburger Tor?"</p>
-                        <p class="text-gray-700">Brandenburg Kapısı'na nasıl gidebilirim?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Wie komme ich am schnellsten zum Brandenburger Tor? Ich habe schon die East Side Gallery besucht."</p>
+                        <p class="text-gray-700">Brandenburg Kapısı'na en hızlı nasıl gidebilirim? East Side Gallery'yi zaten ziyaret ettim.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Was kostet das?"</p>
-                        <p class="text-gray-700">Bu ne kadar?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Was kostet das insgesamt? Ich zahle mit Karte."</p>
+                        <p class="text-gray-700">Bu toplam ne kadar? Kartla ödeyeceğim.</p>
                     </div>
                     
                     <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich verstehe nicht. Können Sie das bitte wiederholen?"</p>
-                        <p class="text-gray-700">Anlamadım. Bunu lütfen tekrar edebilir misiniz?</p>
+                        <p class="font-semibold text-gray-800 mb-2">"Ich habe das nicht ganz verstanden. Können Sie das bitte langsamer wiederholen?"</p>
+                        <p class="text-gray-700">Tam anlamadım. Bunu lütfen daha yavaş tekrar edebilir misiniz?</p>
+                    </div>
+                    
+                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
+                        <p class="font-semibold text-gray-800 mb-2">"Ich suche nach einem guten Café in der Nähe. Haben Sie eine Empfehlung?"</p>
+                        <p class="text-gray-700">Yakınlarda iyi bir kafe arıyorum. Bir öneriniz var mı?</p>
+                    </div>
+                    
+                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
+                        <p class="font-semibold text-gray-800 mb-2">"Könnte ich bitte die Speisekarte haben? Ich bin Vegetarierin."</p>
+                        <p class="text-gray-700">Lütfen menüyü alabilir miyim? Vejetaryenim.</p>
+                    </div>
+                    
+                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
+                        <p class="font-semibold text-gray-800 mb-2">"Wie ist das Wetter morgen? Ich plane eine Radtour."</p>
+                        <p class="text-gray-700">Yarın hava nasıl? Bisiklet turu planlıyorum.</p>
+                    </div>
+                    
+                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
+                        <p class="font-semibold text-gray-800 mb-2">"Ich lerne Deutsch und würde gerne üben. Können wir auf Deutsch sprechen?"</p>
+                        <p class="text-gray-700">Almanca öğreniyorum ve pratik yapmak istiyorum. Almanca konuşabilir miyiz?</p>
                     </div>
                 </div>
                 
@@ -661,8 +679,8 @@
                         <i class="fas fa-lightbulb mr-2"></i> Almanca Öğrenme Tavsiyesi
                     </h3>
                     <p class="text-gray-700">
-                        Berlin'de birçok kişi İngilizce konuşsa da, temel Almanca ifadeler kullanmak yerel halkla iletişiminizi 
-                        güçlendirecektir. Günlük hayatta bu cümleleri kullanmaya çalışın. Yanlış yapmaktan korkmayın, 
+                        Berlin'de birçok kişi İngilizce konuşsa da, B1-B2 seviyesindeki ifadeler kullanmak yerel halkla iletişiminizi 
+                        güçlendirecektir. Günlük hayatta bu cümleleri deneyin, özellikle kafelerde veya etkinliklerde. Yanlış yapmaktan korkmayın, 
                         Berlinliler dil çabalarınızı takdir edecektir.
                     </p>
                 </div>
