@@ -3,881 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin ve Brüksel Aktiviteleri ve Pratik Rehberi - Ağustos 2025</title>
-    <script type="text/javascript" nonce="8e270eb3bcce40edba6f1485c40" src="//local.adguard.org?ts=1755434708157&amp;type=content-script&amp;dmn=files.oaiusercontent.com&amp;url=https%3A%2F%2Ffiles.oaiusercontent.com%2Ffile-FDA3zhV8tdjpRXeU7m6NCi%3Fse%3D2025-08-17T13%253A27%253A11Z%26sp%3Dr%26sv%3D2024-08-04%26sr%3Db%26rscc%3Dmax-age%253D299%252C%2520immutable%252C%2520private%26rscd%3Dattachment%253B%2520filename%253Dindex%252520%25252813%252529.html%26skoid%3Dac06a4bf-c8dd-4d8f-b848-b956137fd1b3%26sktid%3Da48cca56-e6da-484e-a814-9c849652bcb3%26skt%3D2025-08-17T07%253A47%253A15Z%26ske%3D2025-08-18T07%253A47%253A15Z%26sks%3Db%26skv%3D2024-08-04%26sig%3DE89n7ra99fqOgg1k7swdvRyPGsaCw03H9XccXtee0lQ%253D&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="8e270eb3bcce40edba6f1485c40" src="//local.adguard.org?ts=1755434708157&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Berlin ve Anvers Aktiviteleri ve Pratik Rehberi - Ağustos 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --accent: #f59e0b;
-            --light: #f0f7ff;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            background-attachment: fixed;
-            color: #1e293b;
-        }
-        
-        .header-gradient {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-        }
-        
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
-        
-        .weather-container {
-            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .weather-container::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-            transform: rotate(30deg);
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #f97316);
-            border-radius: 2px;
-        }
-        
-        .transport-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-        }
-        
-        .transport-table th {
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            text-align: left;
-        }
-        
-        .transport-table th, .transport-table td {
-            padding: 16px 20px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .transport-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .transport-table tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-        
-        .transport-table tr:hover {
-            background-color: #f0f7ff;
-        }
-        
-        .phrase-card {
-            border-left: 4px solid var(--accent);
-            transition: all 0.3s ease;
-        }
-        
-        .phrase-card:hover {
-            transform: translateX(5px);
-            border-left: 4px solid var(--secondary);
-        }
-        
-        .activity-tag {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            background: #dbeafe;
-            color: var(--secondary);
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .health-warning {
-            background: rgba(255, 241, 242, 0.8);
-            border: 1px solid #fecaca;
-            border-left: 4px solid #ef4444;
-        }
-        
-        .special-event-card {
-            border: 2px solid #fcd34d;
-            background: linear-gradient(to right, #fffbeb, #fef3c7);
-        }
-        
-        .weather-day {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .weather-day:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        .shopping-card {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 1px solid #bbf7d0;
-        }
-        
-        .education-note {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-left: 4px solid #38bdf8;
-        }
-        
-        @media (max-width: 768px) {
-            .section-title::after {
-                width: 40px;
-            }
-            
-            .transport-table th, .transport-table td {
-                padding: 12px 15px;
-                font-size: 0.9rem;
-            }
-            
-            .activity-tag {
-                padding: 5px 12px;
-                font-size: 0.8rem;
-            }
-            
-            .weather-forecast {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .weather-day {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                text-align: left;
-                padding: 12px;
-            }
-        }
+        :root { --primary:#2563eb; --secondary:#1e40af; --accent:#f59e0b; --light:#f0f7ff; }
+        body { font-family:'Inter',sans-serif; background:linear-gradient(135deg,#f0f7ff 0%,#e6f0ff 100%); background-attachment:fixed; color:#1e293b; }
+        .header-gradient { background:linear-gradient(135deg,var(--secondary) 0%,var(--primary) 100%); }
+        .card { background:rgba(255,255,255,.95); backdrop-filter:blur(10px); border-radius:16px; overflow:hidden; transition:.3s ease; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+        .card:hover { transform:translateY(-4px); box-shadow:0 15px 40px rgba(0,0,0,.12); }
+        .weather-container { background:linear-gradient(135deg,#60a5fa 0%,#3b82f6 100%); position:relative; overflow:hidden; }
+        .weather-container::before { content:""; position:absolute; top:-50%; right:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 70%); transform:rotate(30deg); }
+        .section-title { position:relative; padding-bottom:10px; }
+        .section-title::after { content:""; position:absolute; bottom:0; left:0; width:60px; height:4px; background:linear-gradient(90deg,var(--accent),#f97316); border-radius:2px; }
+        .transport-table { width:100%; border-collapse:separate; border-spacing:0; }
+        .transport-table th { background:var(--primary); color:#fff; font-weight:600; text-align:left; }
+        .transport-table th,.transport-table td { padding:16px 20px; border-bottom:1px solid #e2e8f0; }
+        .transport-table tr:last-child td { border-bottom:none; }
+        .transport-table tr:nth-child(even) { background-color:#f8fafc; }
+        .transport-table tr:hover { background-color:#f0f7ff; }
+        .phrase-card { border-left:4px solid var(--accent); transition:all .3s ease; }
+        .phrase-card:hover { transform:translateX(5px); border-left:4px solid var(--secondary); }
+        .activity-tag { display:inline-flex; align-items:center; padding:6px 14px; border-radius:50px; font-size:.85rem; font-weight:500; background:#dbeafe; color:var(--secondary); margin-right:8px; margin-bottom:8px; }
+        .health-warning { background:rgba(255,241,242,.8); border:1px solid #fecaca; border-left:4px solid #ef4444; }
+        .special-event-card { border:2px solid #fcd34d; background:linear-gradient(to right,#fffbeb,#fef3c7); }
+        .weather-day { background:rgba(255,255,255,.2); border-radius:12px; padding:15px; text-align:center; transition:transform .3s ease; }
+        .weather-day:hover { transform:translateY(-5px); background:rgba(255,255,255,.3); }
+        .shopping-card { background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%); border:1px solid #bbf7d0; }
+        .education-note { background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%); border-left:4px solid #38bdf8; }
+        .note { background:#f8fafc; border-left:4px solid #0ea5e9; }
+        .train-option { border-left: 3px solid #3b82f6; transition: all 0.3s; }
+        .train-option:hover { border-left: 3px solid #f59e0b; background-color: #f0f7ff; }
+        @media (max-width:768px){ .section-title::after{width:40px} .transport-table th,.transport-table td{padding:12px 15px;font-size:.9rem} .activity-tag{padding:5px 12px;font-size:.8rem} .weather-forecast{flex-direction:column;gap:10px} .weather-day{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:12px} }
     </style>
 </head>
 <body class="min-h-screen">
-    <div class="container mx-auto px-4 sm:px-6 py-8 max-w-5xl">
-        <!-- Header -->
-        <header class="card mb-8 overflow-hidden">
-            <div class="header-gradient py-12 px-6 text-center">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Berlin &amp; Brüksel Aktiviteleri ve Pratik Rehberi</h1>
-                <div class="flex flex-col sm:flex-row justify-center items-center text-white/90">
-                    <p class="text-lg mb-2 sm:mb-0 sm:mr-4 flex items-center">
-                        <i class="fas fa-calendar-alt mr-2"></i> 10‑28 Ağustos 2025
-                    </p>
-                    <p class="text-lg flex items-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i> GLS Campus Berlin &amp; Brüksel
-                    </p>
+<div class="container mx-auto px-4 sm:px-6 py-8 max-w-5xl">
+    <!-- Header -->
+    <header class="card mb-8 overflow-hidden">
+        <div class="header-gradient py-12 px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Berlin → Anvers Rehberi</h1>
+            <div class="flex flex-col sm:flex-row justify-center items-center text-white/90">
+                <p class="text-lg mb-2 sm:mb-0 sm:mr-4 flex items-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> Ağustos 2025
+                </p>
+                <p class="text-lg flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i> GLS Berlin & Anvers
+                </p>
+            </div>
+        </div>
+        <div class="p-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="activity-tag"><i class="fas fa-sun mr-1"></i> Berlin Hava</div>
+                <div class="activity-tag"><i class="fas fa-sun mr-1"></i> Anvers Hava</div>
+                <div class="activity-tag"><i class="fas fa-train mr-1"></i> Berlin→Anvers</div>
+                <div class="activity-tag"><i class="fas fa-language mr-1"></i> Almanca (B2–C1)</div>
+            </div>
+            <div class="education-note mt-6 p-4 rounded-lg flex items-start">
+                <i class="fas fa-user-graduate text-blue-500 text-xl mt-1 mr-3"></i>
+                <div>
+                    <p class="font-semibold text-blue-800">Dil Eğitimi (GLS Berlin)</p>
+                    <p class="text-gray-700 mt-1">Kurs dönemi: 10–24 Ağustos 2025. <strong>23 Ağustos</strong>’ta yurttan çıkış yapılacak ve Anvers'e geçilecektir.</p>
                 </div>
             </div>
+        </div>
+    </header>
+
+    <!-- Berlin Hava Durumu (Güncel) -->
+    <section class="weather-container card mb-8 text-white">
+        <div class="relative z-10 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-cloud-sun mr-3"></i> Berlin Hava Durumu (19–23 Ağustos)
+                </h2>
+                <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
+                    <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">19 Ağustos 2025</span>
+                </div>
+            </div>
+
+            <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">19 Ağu</p>
+                    <i class="fas fa-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">27°C</p><p class="text-sm opacity-90">18°C</p>
+                    <p class="mt-1 text-sm">Güneşli</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">20 Ağu</p>
+                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">25°C</p><p class="text-sm opacity-90">17°C</p>
+                    <p class="mt-1 text-sm">Parçalı bulutlu</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">21 Ağu</p>
+                    <i class="fas fa-cloud-rain text-3xl my-2"></i>
+                    <p class="text-xl font-bold">23°C</p><p class="text-sm opacity-90">16°C</p>
+                    <p class="mt-1 text-sm">Zaman zaman yağış</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">22 Ağu</p>
+                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">24°C</p><p class="text-sm opacity-90">16°C</p>
+                    <p class="mt-1 text-sm">Bulutlu aralıklı</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">23 Ağu</p>
+                    <i class="fas fa-cloud text-3xl my-2"></i>
+                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">15°C</p>
+                    <p class="mt-1 text-sm">Serin ve bulutlu</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="mb-3 text-lg"><strong>Özet:</strong> Berlin'de hava sıcak ve güneşli başlayıp hafif serinleyecek. 21 Ağustos'ta yağmur bekleniyor. Hafta sonu tren yolculuğu için rahat koşullar.</p>
+                    <div class="bg-white/20 p-4 rounded-xl mt-4">
+                        <p class="font-semibold flex items-center"><i class="fas fa-umbrella-beach mr-2"></i> Öneriler</p>
+                        <p>19-20 Ağustos park ve açık hava aktiviteleri için ideal. 21 Ağustos'ta müzeler ve kapalı mekanlar önerilir.</p>
+                    </div>
+                </div>
+                <div class="health-warning p-4 rounded-xl text-gray-900 bg-white">
+                    <p class="font-semibold flex items-center"><i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Notu</p>
+                    <p class="mt-2">Sıcak günlerde güneş kremi ve su tüketimi önemli. Gece serinliğine karşı ince ceket.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berlin: Haftalık Aktiviteler -->
+    <section class="card mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">Berlin - Haftalık Aktivite Planı</h2>
+            <p class="mb-6 text-gray-700">Ders sonrası ve hafta sonu için özel aktivite önerileri (19-23 Ağustos):</p>
             
-            <div class="p-6">
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="activity-tag">
-                        <i class="fas fa-sun mr-1"></i> Hava Durumu
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pazartesi -->
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-sun text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-blue-900">19 Ağu (Pzt)</h3>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">27°C</span>
                     </div>
-                    <div class="activity-tag">
-                        <i class="fas fa-map-marked-alt mr-1"></i> Gezi Rehberi
-                    </div>
-                    <div class="activity-tag">
-                        <i class="fas fa-subway mr-1"></i> Ulaşım
-                    </div>
-                    <div class="activity-tag">
-                        <i class="fas fa-language mr-1"></i> Almanca
-                    </div>
-                    <div class="activity-tag">
-                        <i class="fas fa-shopping-basket mr-1"></i> Alışveriş
-                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Öğleden sonra: <strong>Tempelhofer Feld</strong> - Bisiklet kiralayarak eski havaalanında tur</li>
+                        <li>Akşam: <strong>Klunkerkranich</strong> - Çatı katında günbatımı manzarası eşliğinde içecek</li>
+                    </ul>
                 </div>
                 
-                <!-- Eğitim ve Seyahat Notu -->
-                <div class="education-note mt-6 p-4 rounded-lg flex items-start">
-                    <i class="fas fa-user-graduate text-blue-500 text-xl mt-1 mr-3"></i>
+                <!-- Salı -->
+                <div class="bg-purple-50 rounded-xl p-5 border border-purple-100">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-cloud-sun text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-purple-900">20 Ağu (Sal)</h3>
+                        </div>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-sm">25°C</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Öğleden sonra: <strong>East Side Gallery</strong> - Tarihi Berlin Duvarı sanatını keşif</li>
+                        <li>Akşam: <strong>Markthalle Neun</strong> - Dünya mutfaklarından lezzetler</li>
+                    </ul>
+                </div>
+                
+                <!-- Çarşamba -->
+                <div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-cloud-rain text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-amber-900">21 Ağu (Çar)</h3>
+                        </div>
+                        <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-sm">23°C</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Öğleden sonra: <strong>Pergamon Müzesi</strong> - Antik eserler koleksiyonu</li>
+                        <li>Akşam: <strong>Kreuzberg'de kapalı mekan</strong> - Oyun kafeleri veya karaoke</li>
+                    </ul>
+                </div>
+                
+                <!-- Perşembe -->
+                <div class="bg-green-50 rounded-xl p-5 border border-green-100">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-cloud-sun text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-green-900">22 Ağu (Per)</h3>
+                        </div>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">24°C</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Öğleden sonra: <strong>Mauerpark Pazarı</strong> - Vintage eşyalar ve sokak yemekleri</li>
+                        <li>Akşam: <strong>Prater Garten</strong> - Berlin'in en eski biergarten'ı</li>
+                    </ul>
+                </div>
+                
+                <!-- Cuma -->
+                <div class="bg-red-50 rounded-xl p-5 border border-red-100">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center mr-3">
+                                <i class="fas fa-cloud text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-red-900">23 Ağu (Cum)</h3>
+                        </div>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">22°C</span>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Sabah: <strong>Yurttan çıkış ve eşyaları toplama</strong></li>
+                        <li>Öğle: <strong>Berlin Hauptbahnhof</strong>'a gidiş ve tren yolculuğu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berlin'den Anvers'e Tren Yolculuğu -->
+    <section class="card mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
+                <i class="fas fa-train mr-3"></i> Berlin'den Anvers'e Tren Yolculuğu (23 Ağustos)
+            </h2>
+            
+            <div class="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-blue-600 text-xl mt-1 mr-3"></i>
                     <div>
-                        <p class="font-semibold text-blue-800">Dil Eğitimi ve Seyahat Planı</p>
-                        <p class="text-gray-700 mt-1">
-                            GLS Campus Berlin'deki Almanca kursunuz 10–24 Ağustos 2025 tarihleri arasında devam etmektedir.
-                            24 Ağustos'ta dersler sona eriyor ve ardından Belçika'nın başkenti Brüksel'e geçeceksiniz.
-                            Ders programınıza uygun etkinlikler seçerken Berlin'den ayrılış gününüzü ve Brüksel'deki planlarınızı da göz önünde bulundurmayı unutmayın.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Hava Durumu -->
-        <section class="weather-container card mb-8 text-white">
-            <div class="relative z-10 p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold flex items-center">
-                        <i class="fas fa-cloud-sun mr-3"></i> 5 Günlük Hava Durumu
-                    </h2>
-                    <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
-                        <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">24 Ağustos 2025</span>
-                    </div>
-                </div>
-                
-                    <!-- 5 Günlük Hava Durumu Banner: Brüksel (24–28 Ağustos) -->
-                    <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">24 Ağu</p>
-                        <i class="fas fa-cloud-sun text-3xl my-2 text-yellow-200"></i>
-                        <p class="text-xl font-bold">22°C</p>
-                        <p class="text-sm opacity-90">14°C</p>
-                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">25 Ağu</p>
-                        <i class="fas fa-cloud-rain text-3xl my-2 text-blue-200"></i>
-                        <p class="text-xl font-bold">21°C</p>
-                        <p class="text-sm opacity-90">14°C</p>
-                        <p class="mt-1 text-sm">Yağmurlu</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">26 Ağu</p>
-                        <i class="fas fa-sun text-3xl my-2 text-yellow-300"></i>
-                        <p class="text-xl font-bold">23°C</p>
-                        <p class="text-sm opacity-90">13°C</p>
-                        <p class="mt-1 text-sm">Güneşli</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">27 Ağu</p>
-                        <i class="fas fa-cloud-sun text-3xl my-2 text-yellow-200"></i>
-                        <p class="text-xl font-bold">23°C</p>
-                        <p class="text-sm opacity-90">13°C</p>
-                        <p class="mt-1 text-sm">Parçalı Bulutlu</p>
-                    </div>
-                    
-                    <div class="weather-day flex-1 min-w-[150px]">
-                        <p class="font-semibold">28 Ağu</p>
-                        <i class="fas fa-cloud text-3xl my-2 text-gray-300"></i>
-                        <p class="text-xl font-bold">21°C</p>
-                        <p class="text-sm opacity-90">14°C</p>
-                        <p class="mt-1 text-sm">Bulutlu</p>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <p class="mb-3 text-lg">
-                            <strong>Hava Durumu Özeti:</strong> Brüksel'in son Ağustos günleri ılımandır. Ortalama yüksek sıcaklık 21–23°C, düşük sıcaklık 13–14°C civarındadır. 
-                            Günlük yağış miktarı yaklaşık 3,20 mm olup ayın son günlerinde birkaç yağmurlu gün beklenir; nem oranı %75'e yakındır【579096020955121†L127-L148】.
-                        </p>
-                        
-                        <div class="bg-white/20 p-4 rounded-xl mt-4">
-                            <p class="font-semibold flex items-center">
-                                <i class="fas fa-umbrella-beach mr-2"></i> Öneriler:
-                            </p>
-                            <p>
-                                Katmanlı kıyafetler tercih edin ve yanınızda şemsiye bulundurun; ara sıra yağmur görülebilir. Yüksek nem nedeniyle uzun yürüyüşlerde 
-                                ve öğle saatlerinde dikkatli olun. Güneşli günlerde Grand Place ve parklar gibi açık hava gezileri keyifli olacaktır; 
-                                yağmurlu günler için müzeler ve kafeler iyi birer alternatif.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Sağlık Uyarısı -->
-                    <div class="health-warning p-4 rounded-xl text-gray-800">
-                        <p class="font-semibold flex items-center">
-                            <i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Uyarısı:
-                        </p>
-                        <p class="mt-2">
-                            Brüksel'deki yüksek nem ve mevsimsel polenler nedeniyle alerjisi veya astımı olanlar dikkatli olmalı. 
-                            Solunum problemleri olanlar özellikle öğle vakitlerinde yoğun fiziksel aktivitelerden kaçınmalı; gerektiğinde maske ve ilaçlarını yanlarında bulundurmalıdır.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Brüksel Gezi Rehberi -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">
-                    Brüksel Gezi Rehberi (24–28 Ağustos)
-                </h2>
-                <p class="mb-6 text-gray-700">
-                    Berlin'deki dil eğitiminizi tamamladıktan sonra Brüksel'de geçireceğiniz birkaç gün için öne çıkan aktiviteler ve mahalleler. 
-                    Şehrin UNESCO ödüllü meydanları, Art Nouveau mirası ve AB kurumları ile dolu kültürel dokusunu keşfetmek için bu önerileri kullanabilirsiniz.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    <!-- Şehir Merkezi & Grand Place -->
-                    <div class="bg-yellow-50 rounded-xl p-5 border border-yellow-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-landmark text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-yellow-900">Şehir Merkezi &amp; Grand Place</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
-                            UNESCO listesinde yer alan Grand Place (Grote Markt) meydanını keşfedin; meydandaki Şehir Müzesi, ünlü Manneken Pis heykelinin
-                            orijinalini sergiler. 19. yüzyılın sonlarında inşa edilen Galeries Royales Saint Hubert, çikolata dükkanları ve lüks butikleriyle
-                            görkemli bir pasaja dönüşür【133901354072650†L131-L156】.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-yellow-100 text-yellow-800">
-                                <i class="fas fa-landmark mr-1"></i> Grand Place
-                            </span>
-                            <span class="activity-tag bg-yellow-100 text-yellow-800">
-                                <i class="fas fa-store mr-1"></i> Galeriler
-                            </span>
-                            <span class="activity-tag bg-yellow-100 text-yellow-800">
-                                <i class="fas fa-history mr-1"></i> Müzeler
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Art Nouveau & Mahalleler -->
-                    <div class="bg-pink-50 rounded-xl p-5 border border-pink-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-building text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-pink-900">Art Nouveau &amp; Mahalleler</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-pink-500 mr-2"></i>
-                            Brüksel, 1.000'den fazla korunmuş Art Nouveau binasıyla akımın beşiği olarak bilinir. Horta Müzesi ve Hotel Hannon'un yanı sıra
-                            Saint Gilles, Ixelles, Etterbeek ve Schaerbeek semtleri bu mimarinin en güzel örneklerini sunar【133901354072650†L226-L268】.
-                            Özel konaklara giriş sağlayan Art Nouveau Pass ile farklı evleri ve müzeleri gezebilirsiniz.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-pink-100 text-pink-800">
-                                <i class="fas fa-brush mr-1"></i> Art Nouveau
-                            </span>
-                            <span class="activity-tag bg-pink-100 text-pink-800">
-                                <i class="fas fa-city mr-1"></i> Mahalleler
-                            </span>
-                            <span class="activity-tag bg-pink-100 text-pink-800">
-                                <i class="fas fa-museum mr-1"></i> Müzeler
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Atomium & Expo Alanı -->
-                    <div class="bg-green-50 rounded-xl p-5 border border-green-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-atom text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-green-900">Atomium &amp; Expo Alanı</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
-                            Heysel'deki Atomium, 1958 Dünya Fuarı anısına inşa edilen 102 metre yüksekliğinde ikonik bir yapıdır ve dokuz küresi Expo 1958'e
-                            adanmış sergilere ev sahipliği yapar【133901354072650†L330-L345】. Yakındaki Mini‑Europe ve Design Museum'u ziyaret ederek
-                            Expo alanının tadını çıkarabilirsiniz; Atomium turu yaklaşık 90 dakika sürer.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-atom mr-1"></i> Atomium
-                            </span>
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-tree mr-1"></i> Mini‑Europe
-                            </span>
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-calendar-alt mr-1"></i> Expo 1958
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- AB Mahallesi & Müzeler -->
-                    <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-university text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-900">AB Mahallesi &amp; Müzeler</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
-                            Parc de Bruxelles'ten yürüyerek ulaşabileceğiniz Avrupa Birliği Mahallesi, Avrupa Parlamentosu ile House of European History ve
-                            Parlamentarium'u barındırır. Bu kurumlar ücretsizdir ancak rezervasyon gerektirir; Hemicycle turunu da planlamayı unutmayın【133901354072650†L369-L392】.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-blue-100 text-blue-800">
-                                <i class="fas fa-landmark mr-1"></i> AB Kurumları
-                            </span>
-                            <span class="activity-tag bg-blue-100 text-blue-800">
-                                <i class="fas fa-book mr-1"></i> Tarih
-                            </span>
-                            <span class="activity-tag bg-blue-100 text-blue-800">
-                                <i class="fas fa-calendar-check mr-1"></i> Rezervasyon
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Aktiviteler -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">
-                    Önerilen Aktiviteler ve Gezilecek Yerler
-                </h2>
-                
-                <p class="mb-6 text-gray-700">
-                    Dil okulu dışı zamanlarda (öğleden sonra, akşamlar, hafta sonları) değerlendirebileceğiniz öneriler. Brandenburg Kapısı ve East Side Gallery'yi zaten gezdiniz, bu yüzden yeni yerlere odaklanın.
-                    Prenzlauer Berg, genç ve canlı bir bölge – sizin için ideal kafeler ve sosyal ortamlar sunar. Hava koşullarına göre güncellendi: bulutlu günlerde iç mekân, güneşli günlerde dış mekân etkinlikleri planlayın. 24 Ağustos'ta Brüksel'e geçeceğiniz için Berlin'de ek günler planlamanıza gerek yok; son gününüzde tren yolculuğuna hazırlanın.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Prenzlauer Berg -->
-                    <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-utensils text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-900">Prenzlauer Berg</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> 
-                            Kastanienallee'de kafeler, Mauerpark'ta pazar ve karaoke (Pazar günleri). Akşam barlarda sosyalleşme - arkadaş edinmek için harika.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag">
-                                <i class="fas fa-coffee mr-1"></i> Kafeler
-                            </span>
-                            <span class="activity-tag">
-                                <i class="fas fa-shopping-bag mr-1"></i> Pazarlar
-                            </span>
-                            <span class="activity-tag">
-                                <i class="fas fa-microphone-alt mr-1"></i> Karaoke
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Şehir Merkezi -->
-                    <div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-monument text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-amber-900">Şehir Merkezi (Güncellenmiş)</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> 
-                            Reichstag (ücretsiz, rezervasyon gerekli). Tiergarten'da piknik - güneşli günlerde ideal (19-20 Ağu). Kreuzberg'e geçin: Sokak sanatı ve hipster kafeler.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-amber-100 text-amber-800">
-                                <i class="fas fa-landmark mr-1"></i> Tarihi Yerler
-                            </span>
-                            <span class="activity-tag bg-amber-100 text-amber-800">
-                                <i class="fas fa-tree mr-1"></i> Tiergarten
-                            </span>
-                            <span class="activity-tag bg-amber-100 text-amber-800">
-                                <i class="fas fa-paint-brush mr-1"></i> Sokak Sanatı
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Müzeler ve Kültür -->
-                    <div class="bg-purple-50 rounded-xl p-5 border border-purple-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-landmark text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-purple-900">Müzeler ve Kültür</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-purple-500 mr-2"></i> 
-                            Museum Island (200. yıl kutlamaları), Pergamon Müzesi - yağmurlu günlerde mükemmel (17 Ağu). Festivaller: Tanz im August, Young Euro Classic. Neukölln'de yoga seansları ekleyin (genç kadınlar için rahatlatıcı).
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-purple-100 text-purple-800">
-                                <i class="fas fa-museum mr-1"></i> Müzeler
-                            </span>
-                            <span class="activity-tag bg-purple-100 text-purple-800">
-                                <i class="fas fa-music mr-1"></i> Festivaller
-                            </span>
-                            <span class="activity-tag bg-purple-100 text-purple-800">
-                                <i class="fas fa-spa mr-1"></i> Yoga
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Berlin'den Brüksel'e Yolculuk -->
-                    <div class="bg-green-50 rounded-xl p-5 border border-green-100">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-train text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-green-900">Berlin'den Brüksel'e Yolculuk (24 Ağustos)</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-green-500 mr-2"></i> 
-                            Berlin'den Brüksel'e yüksek hızlı trenle seyahat edeceksiniz. Yaklaşık 650 km'lik yolculuk 7 saat 27 dakika sürer ve modern vagonlar
-                            geniş diz mesafesi ile panoramik pencereler sunar【329332717899252†L67-L100】. İlk sefer 05:59'dadır; biletlerinizi önceden rezerve edin.
-                            Bu keyifli yolculuk sizi Belçika'nın başkentindeki maceraya taşıyacak.
-                        </p>
-                        <div class="flex flex-wrap mt-3">
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-train mr-1"></i> Tren Yolculuğu
-                            </span>
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-chair mr-1"></i> Konforlu Seyahat
-                            </span>
-                            <span class="activity-tag bg-green-100 text-green-800">
-                                <i class="fas fa-ticket-alt mr-1"></i> Bilet Rehberi
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Yakın Alışveriş Yerleri -->
-                    <div class="shopping-card rounded-xl p-5">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mr-3">
-                                <i class="fas fa-shopping-basket text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-green-900">Yakın Alışveriş Yerleri</h3>
-                        </div>
-                        <p class="text-gray-700 mb-3">
-                            <i class="fas fa-map-marker-alt text-green-600 mr-2"></i> 
-                            GLS Campus çevresindeki küçük dükkanlar ve marketler (genç kadınlar için kozmetik ve moda odaklı):
-                        </p>
-                        <ul class="text-gray-700 list-disc pl-5 space-y-2 mt-3">
-                            <li><strong>BioCompany</strong> (Eberswalder Str. 26) - Organik ürünler ve güzellik malzemeleri</li>
-                            <li><strong>Kaufland</strong> (Schönhauser Allee 80) - Süpermarket, uygun fiyatlı giyim</li>
-                            <li><strong>Edeka Center</strong> (Danziger Str. 15) - Taze gıdalar ve atıştırmalıklar</li>
-                            <li><strong>Backwerk</strong> (Schönhauser Allee 76A) - Fırın, kahve molası</li>
-                            <li><strong>KiezKaufhaus</strong> (Kastanienallee 85) - Günlük ihtiyaçlar ve hediyelikler</li>
-                            <li><strong>Alexanderplatz</strong> - Büyük mağazalar (H&M, Zara) için alışveriş</li>
+                        <p class="font-medium text-blue-800">Önemli Bilgiler:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-700">
+                            <li>Yolculuk süresi: 7-8 saat (aktarmalı)</li>
+                            <li>Biletler erken alındığında €27.99'dan başlıyor</li>
+                            <li>Berlin Hbf (Merkez İstasyon)'dan kalkış</li>
+                            <li>Anvers Merkez İstasyonu'na varış</li>
+                            <li>Aktarmalar genellikle Köln veya Brüksel'de</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Özel Aktiviteler -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">
-                    Özel Aktiviteler ve Etkinlikler
-                </h2>
+            
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Önerilen Tren Seçenekleri:</h3>
+            
+            <div class="space-y-4">
+                <!-- Seçenek 1 -->
+                <div class="train-option p-4 rounded-lg bg-white">
+                    <div class="flex flex-wrap items-center justify-between mb-3">
+                        <div>
+                            <span class="font-bold text-lg">08:25 - 15:45</span>
+                            <span class="ml-3 bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">En Hızlı</span>
+                        </div>
+                        <div class="text-xl font-bold text-blue-600">€27.99</div>
+                    </div>
+                    <div class="text-gray-700 flex items-center">
+                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
+                        <span>1 aktarma (Köln Hbf)</span>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-600">
+                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-wifi mr-1"></i> Ücretsiz WiFi • <i class="fas fa-utensils mr-1"></i> Bistro
+                    </div>
+                </div>
                 
-                <div class="space-y-6">
-                    <!-- Etkinlik 1 -->
-                    <div class="special-event-card rounded-xl p-5">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-music text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-amber-900">Young Euro Classic Festivali</h3>
+                <!-- Seçenek 2 -->
+                <div class="train-option p-4 rounded-lg bg-white">
+                    <div class="flex flex-wrap items-center justify-between mb-3">
+                        <div>
+                            <span class="font-bold text-lg">10:15 - 17:55</span>
+                            <span class="ml-3 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-sm">Popüler</span>
                         </div>
-                        <p class="text-gray-700">
-                            <strong>Tarih:</strong> 15-30 Ağustos 2025<br>
-                            <strong>Yer:</strong> Konzerthaus Berlin, Gendarmenmarkt<br>
-                            <strong>Detaylar:</strong> Avrupa'nın genç yeteneklerinin klasik müzik performanslarını sunacağı bu festival, 
-                            Berlin yazının en önemli kültürel etkinliklerinden biri. 20 Ağustos'ta İstanbul Gençlik Orkestrası'nın 
-                            özel bir performansı olacak. Biletler €25-€60 arasında değişiyor. Öğrenciler için %30 indirim mevcut. Müzik sever gençler için ideal.
-                        </p>
+                        <div class="text-xl font-bold text-blue-600">€29.99</div>
                     </div>
-                    
-                    <!-- Etkinlik 2 -->
-                    <div class="special-event-card rounded-xl p-5">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-utensils text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-900">Berlin Street Food Festivali</h3>
-                        </div>
-                        <p class="text-gray-700">
-                            <strong>Tarih:</strong> 22-24 Ağustos 2025<br>
-                            <strong>Yer:</strong> Industriepalast Hostel, Warschauer Straße<br>
-                            <strong>Detaylar:</strong> Dünya mutfağından 50'den fazla sokak lezzetinin bir araya geldiği bu festivalde 
-                            Türk mutfağından özel lezzetler de yer alıyor. Vegan ve vejetaryen seçenekler bolca mevcut. 
-                            Giriş ücreti €5 (12 yaş altı ücretsiz). Özel atölye çalışmaları için ekstra ücret alınıyor. Sosyalleşme fırsatı.
-                        </p>
+                    <div class="text-gray-700 flex items-center">
+                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
+                        <span>1 aktarma (Brüksel Midi)</span>
                     </div>
-                    
-                    <!-- Etkinlik 3 -->
-                    <div class="special-event-card rounded-xl p-5">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-bicycle text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-green-900">Tempelhofer Feld Bisiklet Turu</h3>
+                    <div class="mt-2 text-sm text-gray-600">
+                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-wifi mr-1"></i> Ücretsiz WiFi • <i class="fas fa-plug mr-1"></i> Priz
+                    </div>
+                </div>
+                
+                <!-- Seçenek 3 -->
+                <div class="train-option p-4 rounded-lg bg-white">
+                    <div class="flex flex-wrap items-center justify-between mb-3">
+                        <div>
+                            <span class="font-bold text-lg">12:05 - 19:30</span>
+                            <span class="ml-3 bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">Ekonomik</span>
                         </div>
-                        <p class="text-gray-700">
-                            <strong>Tarih:</strong> Her Cumartesi, 10:00-12:00<br>
-                            <strong>Yer:</strong> Tempelhofer Feld girişi<br>
-                            <strong>Detaylar:</strong> Eski havalimanı pistinde rehber eşliğinde bisiklet turu. Bisiklet kiralama 
-                            €10, rehberli tur €15. Toplam 12 km'lik parkurda Berlin tarihi hakkında bilgiler veriliyor. 
-                            Rezervasyon web sitesinden yapılıyor. Grup indirimi mevcut (5+ kişi %20 indirim). Güneşli günlerde önerilir (19 Ağu sonrası).
-                        </p>
+                        <div class="text-xl font-bold text-blue-600">€19.99</div>
+                    </div>
+                    <div class="text-gray-700 flex items-center">
+                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
+                        <span>2 aktarma (Hannover & Köln)</span>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-600">
+                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-suitcase mr-1"></i> Bagaj bölmesi
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Toplu Taşıma -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                    <i class="fas fa-subway mr-3"></i> Toplu Taşıma Bilgileri
-                </h2>
-                
-                <div class="mb-6 text-gray-700">
-                    <p class="mb-3">
-                        <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
-                        GLS Campus, Prenzlauer Berg'de (U2 hattı, Eberswalder Straße istasyonu). Berlin BVG sistemi kullanılır. 
-                        Fiyatlar 2025 itibarıyla (AB zone, şehir içi).
-                    </p>
-                    
-                    <div class="bg-blue-50 rounded-lg p-4 mt-4">
-                        <p class="font-semibold text-blue-800 mb-2 flex items-center">
-                            <i class="fas fa-lightbulb mr-2"></i> Tavsiye:
-                        </p>
-                        <p>
-                            Haftalık veya aylık biletler uzun süreli konaklamalarda daha ekonomiktir. Deutschlandticket tüm Almanya'da geçerlidir.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="overflow-x-auto">
-                    <table class="transport-table rounded-xl">
-                        <thead>
-                            <tr>
-                                <th class="rounded-tl-xl">Bilet Türü</th>
-                                <th>Açıklama</th>
-                                <th>Ücret</th>
-                                <th class="rounded-tr-xl">Satın Alma</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="font-medium">Tek Seferlik</td>
-                                <td>2 saat, sınırsız transfer.</td>
-                                <td>€3.80</td>
-                                <td>Otomat, BVG app, sürücü.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Kısa Mesafe</td>
-                                <td>3 durak U/S-Bahn, 6 durak tram/otobüs.</td>
-                                <td>€2.60</td>
-                                <td>Otomat, app.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Günlük</td>
-                                <td>24 saat sınırsız.</td>
-                                <td>€9.50</td>
-                                <td>Otomat, app.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Haftalık</td>
-                                <td>7 gün sınırsız.</td>
-                                <td>€36</td>
-                                <td>Otomat, app, abonelik.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Aylık (Deutschlandticket)</td>
-                                <td>Almanya genelinde sınırsız.</td>
-                                <td>€58</td>
-                                <td>App, online abonelik.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Diğer Ulaşım Seçenekleri</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="flex items-center mb-2">
-                                <i class="fas fa-taxi text-yellow-500 text-xl mr-3"></i>
-                                <h4 class="font-semibold">Taksi</h4>
-                            </div>
-                            <p class="text-gray-700">Şehir merkezine €10-20 (6-10 km). Başlangıç €3.90 + €2/km. App: Free Now, Uber.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="flex items-center mb-2">
-                                <i class="fas fa-bicycle text-green-500 text-xl mr-3"></i>
-                                <h4 class="font-semibold">Alternatif Ulaşım</h4>
-                            </div>
-                            <p class="text-gray-700">Bisiklet (Nextbike, €1/30 dk), scooter (Tier/Lime, €1 + €0.20/dk), araç paylaşımı (Share Now, €0.19/dk).</p>
-                        </div>
+            
+            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <div class="flex items-start">
+                    <i class="fas fa-lightbulb text-yellow-600 text-xl mt-1 mr-3"></i>
+                    <div>
+                        <p class="font-medium text-yellow-800">Tren Yolculuğu İpuçları:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-700">
+                            <li>Biletlerinizi en az 3 gün önce <a href="https://www.bahn.de" class="text-blue-600 underline" target="_blank">bahn.de</a>'den alın</li>
+                            <li>Büyük valizler için rezervasyon yaptırın (€4.50)</li>
+                            <li>Yanınıza şarj cihazı, atıştırmalık ve su alın</li>
+                            <li>Aktarma istasyonlarında minimum 20 dakika süre bırakın</li>
+                            <li>DB Navigator uygulamasını indirin (gerçek zamanlı bilgi)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Yolculuk ve Dönüş Uçuşu -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                    <i class="fas fa-plane-departure mr-3"></i> Yolculuk ve Dönüş Uçuşu
+    <!-- Anvers Hava Durumu (24–28 Ağu) -->
+    <section class="weather-container card mb-8 text-white">
+        <div class="relative z-10 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-cloud-sun mr-3"></i> Anvers Hava Durumu (24–28 Ağustos)
                 </h2>
-                <p class="mb-6 text-gray-700">
-                    Berlin'den Brüksel'e konforlu tren yolculuğu ve Brüksel'den Antalya'ya dönüş uçuşunuz hakkında önemli bilgiler aşağıda özetlenmiştir.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Tren Bilgisi -->
-                    <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-train text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800">Berlin – Brüksel Tren Yolculuğu</h3>
-                        </div>
-                        <p class="text-gray-700 mb-2">
-                            Berlin ile Brüksel arasındaki tren seyahati 650 km’lik bir rotada yaklaşık 7 saat 27 dakika sürer; modern vagonlar geniş diz mesafesi ve panoramik pencereler
-                            sunar【329332717899252†L67-L100】. Sabah 05:59’da ilk sefer bulunur ve seferler günde ortalama bir kez yapılır. Biletlerinizi önceden alarak koltuk rezervasyonu yapmanız
-                            tavsiye edilir.
-                        </p>
-                    </div>
-                    <!-- Uçuş Bilgisi -->
-                    <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                        <div class="flex items-center mb-3">
-                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-plane text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-800">Brüksel – Antalya Uçuşu</h3>
-                        </div>
-                        <p class="text-gray-700 mb-2">
-                            28 Ağustos'ta saat 13:14’te Pegasus Airlines ile Brüksel Havalimanı'ndan (BRU) Antalya'ya (AYT) direkt uçacaksınız. Uçuş süresi yaklaşık 3 saat 40 dakikadır ve varış saati
-                            17:55’tir【727688952450716†L125-L133】. Bu rota ayrıca SunExpress ve TUI Airlines Belgium tarafından 5 saat 10 dakikalık uçuşlarla da işletilmektedir; toplam mesafe
-                            2 610 km'dir【624382450575078†L190-L232】. Uçuş gününde havalimanında en az iki saat önce check‑in yaparak güvenlik ve pasaport kontrollerine zaman ayırın.
-                        </p>
-                    </div>
+                <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
+                    <i class="fas fa-sync-alt mr-1"></i> Tahmini
                 </div>
             </div>
-        </section>
 
-        <!-- Almanca Cümleler (B1-B2 Seviyesi) -->
-        <section class="card mb-8">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                    <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (B1-B2 Seviyesi)
-                </h2>
-                
-                <p class="mb-6 text-gray-700">
-                    Aşağıdaki cümleler Almanca B1-B2 seviyesindeki öğrenciler için hazırlanmıştır. Günlük konuşmalarda kullanabileceğiniz 
-                    daha gelişmiş ifadeleri içerir. Daha fazla cümle eklendi.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Entschuldigung, könnten Sie mir bitte erklären, wie ich zum nächsten Supermarkt komme?"</p>
-                        <p class="text-gray-700">Affedersiniz, en yakın süpermarkete nasıl gideceğimi açıklayabilir misiniz lütfen?</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich würde gerne eine Fahrkarte nach Mitte kaufen. Gibt es Ermäßigungen für Studenten?"</p>
-                        <p class="text-gray-700">Mitte'ye bir bilet almak istiyorum. Öğrenciler için indirim var mı?</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Können Sie mir sagen, wie spät es ist? Ich habe meine Uhr vergessen."</p>
-                        <p class="text-gray-700">Bana saatin kaç olduğunu söyleyebilir misiniz? Saatimi unuttum.</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Wie komme ich am schnellsten zum Brandenburger Tor? Ich habe schon die East Side Gallery besucht."</p>
-                        <p class="text-gray-700">Brandenburg Kapısı'na en hızlı nasıl gidebilirim? East Side Gallery'yi zaten ziyaret ettim.</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Was kostet das insgesamt? Ich zahle mit Karte."</p>
-                        <p class="text-gray-700">Bu toplam ne kadar? Kartla ödeyeceğim.</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich habe das nicht ganz verstanden. Können Sie das bitte langsamer wiederholen?"</p>
-                        <p class="text-gray-700">Tam anlamadım. Bunu lütfen daha yavaş tekrar edebilir misiniz?</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich suche nach einem guten Café in der Nähe. Haben Sie eine Empfehlung?"</p>
-                        <p class="text-gray-700">Yakınlarda iyi bir kafe arıyorum. Bir öneriniz var mı?</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Könnte ich bitte die Speisekarte haben? Ich bin Vegetarierin."</p>
-                        <p class="text-gray-700">Lütfen menüyü alabilir miyim? Vejetaryenim.</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Wie ist das Wetter morgen? Ich plane eine Radtour."</p>
-                        <p class="text-gray-700">Yarın hava nasıl? Bisiklet turu planlıyorum.</p>
-                    </div>
-                    
-                    <div class="phrase-card bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm">
-                        <p class="font-semibold text-gray-800 mb-2">"Ich lerne Deutsch und würde gerne üben. Können wir auf Deutsch sprechen?"</p>
-                        <p class="text-gray-700">Almanca öğreniyorum ve pratik yapmak istiyorum. Almanca konuşabilir miyiz?</p>
-                    </div>
+            <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">24 Ağu</p>
+                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">23°C</p><p class="text-sm opacity-90">15°C</p>
+                    <p class="mt-1 text-sm">Parçalı bulutlu</p>
                 </div>
-                
-                <div class="mt-8 bg-blue-50 rounded-xl p-5">
-                    <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center">
-                        <i class="fas fa-lightbulb mr-2"></i> Almanca Öğrenme Tavsiyesi
-                    </h3>
-                    <p class="text-gray-700">
-                        Berlin'de birçok kişi İngilizce konuşsa da, B1-B2 seviyesindeki ifadeler kullanmak yerel halkla iletişiminizi 
-                        güçlendirecektir. Günlük hayatta bu cümleleri deneyin, özellikle kafelerde veya etkinliklerde. Yanlış yapmaktan korkmayın, 
-                        Berlinliler dil çabalarınızı takdir edecektir.
-                    </p>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">25 Ağu</p>
+                    <i class="fas fa-cloud-rain text-3xl my-2"></i>
+                    <p class="text-xl font-bold">21°C</p><p class="text-sm opacity-90">14°C</p>
+                    <p class="mt-1 text-sm">Zaman zaman yağış</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">26 Ağu</p>
+                    <i class="fas fa-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">24°C</p><p class="text-sm opacity-90">15°C</p>
+                    <p class="mt-1 text-sm">Güneşli aralıklar</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">27 Ağu</p>
+                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
+                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">14°C</p>
+                    <p class="mt-1 text-sm">Serin ve sakin</p>
+                </div>
+                <div class="weather-day flex-1 min-w-[150px]">
+                    <p class="font-semibold">28 Ağu</p>
+                    <i class="fas fa-cloud text-3xl my-2"></i>
+                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">13°C</p>
+                    <p class="mt-1 text-sm">Uçuş saati öncesi bulutlu</p>
                 </div>
             </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="text-center py-6 text-gray-600 text-sm">
-            <p>© 2025 Berlin ve Brüksel Aktiviteleri ve Pratik Rehberi – GLS Campus Berlin &amp; Brüksel için hazırlanmıştır</p>
-            <p class="mt-2">Bu rehber bilgilendirme amaçlıdır. Fiyatlar ve detaylar değişiklik gösterebilir.</p>
-        </footer>
-    </div>
 
-    <script>
-        // Güncel tarihi gösterme
-        const now = new Date();
-        const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        const formattedDate = now.toLocaleDateString('tr-TR', options);
-        document.getElementById('current-date').textContent = formattedDate;
-    </script>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="mb-3 text-lg"><strong>Özet:</strong> Son Ağustos günlerinde Anvers'te ılıman ve zaman zaman yağışlı hava beklenir. Katmanlı giyinin; hafif yağmurluk ve şemsiye önerilir.</p>
+                    <div class="bg-white/20 p-4 rounded-xl mt-4">
+                        <p class="font-semibold flex items-center"><i class="fas fa-umbrella-beach mr-2"></i> Öneriler</p>
+                        <p>Müzeler ve kafeler yağışlı saatler için iyi alternatiftir. Parklar için 26–27 Ağustos uygundur.</p>
+                    </div>
+                </div>
+                <div class="health-warning p-4 rounded-xl text-gray-900 bg-white">
+                    <p class="font-semibold flex items-center"><i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Notu</p>
+                    <p class="mt-2">Nem %70+ olabilir; polen hassasiyeti olanlar için göz damlası/maske önerilir. Uzun yürüyüşlerde su tüketimini artırın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anvers Gezi Rehberi (24–28 Ağu) -->
+    <section class="card mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">Anvers Gezi Rehberi (24–28 Ağustos)</h2>
+            <p class="mb-6 text-gray-700">Şehir merkezinde yürüyüşe uygun bir rota ve kısa ziyaretler için öne çıkan yerler:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3"><i class="fas fa-star text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Tarihi Merkez</h3></div>
+                    <p class="text-gray-700">Grote Markt meydanı, Brabo Çeşmesi ve Anvers Katedrali. Akşam ışıklandırmasıyla etkileyici.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3"><i class="fas fa-ship text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Scheldt Nehri Kıyısı</h3></div>
+                    <p class="text-gray-700">Nehir manzarası, yürüyüş yolları ve Steen Kalesi. Güneş batımı için mükemmel.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mr-3"><i class="fas fa-gem text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Elmas Bölgesi</h3></div>
+                    <p class="text-gray-700">Dünya elmas ticaretinin kalbi. Müzeler ve tarihi binalarla çevrili.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center mr-3"><i class="fas fa-utensils text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Yerel Lezzetler</h3></div>
+                    <p class="text-gray-700">Belçika çikolatası, waffle ve yerel biraların tadına bakabileceğiniz mekanlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Almanca Cümleler (B2–C1) -->
+    <section class="card mb-8">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
+                <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (B2–C1 Seviyesi)
+            </h2>
+            <p class="mb-6 text-gray-700">Günlük ve akademik/iş bağlamlarında kibar istek, açıklama ve teyit cümleleri.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
+                    <p class="font-semibold text-gray-800 mb-2">„Entschuldigen Sie, wäre es möglich, mir kurz zu erläutern, wie ich am effizientesten zur Universitätsbibliothek gelange und ob sie heute geöffnet ist?“</p>
+                    <p class="text-gray-700">Kütüphaneye en hızlı nasıl gidebileceğimi ve bugün açık olup olmadığını kısaca anlatabilir misiniz?</p>
+                </div>
+                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
+                    <p class="font-semibold text-gray-800 mb-2">„Könnten Sie mir bitte mitteilen, ob es in diesem Stadtteil abends besondere Sicherheitsaspekte zu beachten gibt?“</p>
+                    <p class="text-gray-700">Bu semtte akşamları dikkat edilmesi gereken özel güvenlik durumları var mı?</p>
+                </div>
+                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
+                    <p class="font-semibold text-gray-800 mb-2">„Ich würde gern einen Termin vereinbaren; wäre kommenden Mittwoch gegen 14 Uhr für Sie machbar?“</p>
+                    <p class="text-gray-700">Bir randevu ayarlamak isterim; gelecek Çarşamba saat 14:00 sizin için uygun olur mu?</p>
+                </div>
+                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
+                    <p class="font-semibold text-gray-800 mb-2">„Falls es Ihnen recht ist, würde ich die Präsentation um einige praktische Beispiele erweitern, damit der theoretische Teil greifbarer wird.“</p>
+                    <p class="text-gray-700">Uygunsa, sunumu bazı pratik örneklerle genişletmek isterim; kuramsal kısım daha somut olur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-600 text-sm">
+        <p>© 2025 Berlin ve Anvers Rehberi – GLS Berlin & Anvers için hazırlanmıştır</p>
+        <p class="mt-2">Bu rehber bilgilendirme amaçlıdır. Fiyatlar ve detaylar değişebilir.</p>
+    </footer>
+</div>
+
+<script>
+  // Güncel tarihi gösterme
+  const now = new Date();
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const formattedDate = now.toLocaleDateString('tr-TR', options);
+  const el = document.getElementById('current-date');
+  if (el) { el.textContent = formattedDate; }
+</script>
 </body>
 </html>
