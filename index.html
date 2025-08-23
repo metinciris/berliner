@@ -1,459 +1,574 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin ve Anvers Aktiviteleri ve Pratik Rehberi - Ağustos 2025</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Antwerpen (Anvers) • Deurne/Rivierenhof Toplu Taşıma + Gezi Rehberi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary:#2563eb; --secondary:#1e40af; --accent:#f59e0b; --light:#f0f7ff; }
-        body { font-family:'Inter',sans-serif; background:linear-gradient(135deg,#f0f7ff 0%,#e6f0ff 100%); background-attachment:fixed; color:#1e293b; }
-        .header-gradient { background:linear-gradient(135deg,var(--secondary) 0%,var(--primary) 100%); }
-        .card { background:rgba(255,255,255,.95); backdrop-filter:blur(10px); border-radius:16px; overflow:hidden; transition:.3s ease; box-shadow:0 10px 30px rgba(0,0,0,.08); }
-        .card:hover { transform:translateY(-4px); box-shadow:0 15px 40px rgba(0,0,0,.12); }
-        .weather-container { background:linear-gradient(135deg,#60a5fa 0%,#3b82f6 100%); position:relative; overflow:hidden; }
-        .weather-container::before { content:""; position:absolute; top:-50%; right:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 70%); transform:rotate(30deg); }
-        .section-title { position:relative; padding-bottom:10px; }
-        .section-title::after { content:""; position:absolute; bottom:0; left:0; width:60px; height:4px; background:linear-gradient(90deg,var(--accent),#f97316); border-radius:2px; }
-        .transport-table { width:100%; border-collapse:separate; border-spacing:0; }
-        .transport-table th { background:var(--primary); color:#fff; font-weight:600; text-align:left; }
-        .transport-table th,.transport-table td { padding:16px 20px; border-bottom:1px solid #e2e8f0; }
-        .transport-table tr:last-child td { border-bottom:none; }
-        .transport-table tr:nth-child(even) { background-color:#f8fafc; }
-        .transport-table tr:hover { background-color:#f0f7ff; }
-        .phrase-card { border-left:4px solid var(--accent); transition:all .3s ease; }
-        .phrase-card:hover { transform:translateX(5px); border-left:4px solid var(--secondary); }
-        .activity-tag { display:inline-flex; align-items:center; padding:6px 14px; border-radius:50px; font-size:.85rem; font-weight:500; background:#dbeafe; color:var(--secondary); margin-right:8px; margin-bottom:8px; }
-        .health-warning { background:rgba(255,241,242,.8); border:1px solid #fecaca; border-left:4px solid #ef4444; }
-        .special-event-card { border:2px solid #fcd34d; background:linear-gradient(to right,#fffbeb,#fef3c7); }
-        .weather-day { background:rgba(255,255,255,.2); border-radius:12px; padding:15px; text-align:center; transition:transform .3s ease; }
-        .weather-day:hover { transform:translateY(-5px); background:rgba(255,255,255,.3); }
-        .shopping-card { background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%); border:1px solid #bbf7d0; }
-        .education-note { background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%); border-left:4px solid #38bdf8; }
-        .note { background:#f8fafc; border-left:4px solid #0ea5e9; }
-        .train-option { border-left: 3px solid #3b82f6; transition: all 0.3s; }
-        .train-option:hover { border-left: 3px solid #f59e0b; background-color: #f0f7ff; }
-        @media (max-width:768px){ .section-title::after{width:40px} .transport-table th,.transport-table td{padding:12px 15px;font-size:.9rem} .activity-tag{padding:5px 12px;font-size:.8rem} .weather-forecast{flex-direction:column;gap:10px} .weather-day{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:12px} }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #0a7;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f9fafb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --chip: #eef7f4;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 28px 20px;
+            border-radius: 0 0 var(--radius) var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0 0 12px 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin: 32px 0 16px 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            margin: 20px 0 12px 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        section {
+            padding: 20px 0;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            padding: 0.4rem 0.8rem;
+            margin: 0.25rem 0.5rem 0.25rem 0;
+            font-size: 0.85rem;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .callout {
+            border-left: 4px solid var(--secondary);
+            background: #f4fffb;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .muted {
+            color: var(--text-light);
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+            margin-right: 0.4rem;
+            color: var(--text);
+        }
+
+        .kbd {
+            border: 1px solid var(--border);
+            border-bottom-width: 2px;
+            border-radius: 6px;
+            padding: 0.1rem 0.4rem;
+            background: var(--bg-light);
+            font-family: ui-monospace;
+            font-size: 0.85rem;
+        }
+
+        .list-ticks li {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .list-ticks li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .phrase td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .small {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 32px;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .grid.cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            header {
+                padding: 32px 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                gap: 15px;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 99;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .card {
+                padding: 16px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            header {
+                padding: 24px 16px;
+            }
+        }
+
+        /* Additional mobile improvements */
+        @media (max-width: 480px) {
+            .badge {
+                display: block;
+                margin: 8px 0;
+                text-align: center;
+            }
+            
+            .phrase td {
+                display: block;
+                width: 100%;
+                padding: 8px 0;
+            }
+            
+            .phrase tr {
+                display: block;
+                margin-bottom: 16px;
+                border-bottom: 2px solid var(--border);
+            }
+            
+            .phrase thead {
+                display: none;
+            }
+        }
+
+        /* Icon styles */
+        .icon-with-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Color switch for dark mode preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #e5e7eb;
+                --text-light: #9ca3af;
+                --bg: #111827;
+                --bg-light: #1f2937;
+                --card-bg: #1f2937;
+                --border: #374151;
+                --chip: #064e3b;
+            }
+        }
     </style>
 </head>
-<body class="min-h-screen">
-<div class="container mx-auto px-4 sm:px-6 py-8 max-w-5xl">
-    <!-- Header -->
-    <header class="card mb-8 overflow-hidden">
-        <div class="header-gradient py-12 px-6 text-center">
-            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Berlin → Anvers Rehberi</h1>
-            <div class="flex flex-col sm:flex-row justify-center items-center text-white/90">
-                <p class="text-lg mb-2 sm:mb-0 sm:mr-4 flex items-center">
-                    <i class="fas fa-calendar-alt mr-2"></i> Ağustos 2025
-                </p>
-                <p class="text-lg flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2"></i> GLS Berlin & Anvers
-                </p>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Antwerpen Rehberi</span>
             </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#quicklook"><i class="fas fa-bolt"></i> Hızlı Bakış</a></li>
+                <li><a href="#airport-day"><i class="fas fa-plane"></i> Havaalanı</a></li>
+                <li><a href="#see-do"><i class="fas fa-camera"></i> Gezi Planı</a></li>
+                <li><a href="#phrasebook"><i class="fas fa-language"></i> Dil Kartı</a></li>
+            </ul>
         </div>
-        <div class="p-6">
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="activity-tag"><i class="fas fa-sun mr-1"></i> Berlin Hava</div>
-                <div class="activity-tag"><i class="fas fa-sun mr-1"></i> Anvers Hava</div>
-                <div class="activity-tag"><i class="fas fa-train mr-1"></i> Berlin→Anvers</div>
-                <div class="activity-tag"><i class="fas fa-language mr-1"></i> Almanca (B2–C1)</div>
-            </div>
-            <div class="education-note mt-6 p-4 rounded-lg flex items-start">
-                <i class="fas fa-user-graduate text-blue-500 text-xl mt-1 mr-3"></i>
-                <div>
-                    <p class="font-semibold text-blue-800">Dil Eğitimi (GLS Berlin)</p>
-                    <p class="text-gray-700 mt-1">Kurs dönemi: 10–24 Ağustos 2025. <strong>23 Ağustos</strong>’ta yurttan çıkış yapılacak ve Anvers'e geçilecektir.</p>
-                </div>
-            </div>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Berlin Hava Durumu (Güncel) -->
-    <section class="weather-container card mb-8 text-white">
-        <div class="relative z-10 p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold flex items-center">
-                    <i class="fas fa-cloud-sun mr-3"></i> Berlin Hava Durumu (19–23 Ağustos)
-                </h2>
-                <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
-                    <i class="fas fa-sync-alt mr-1"></i> Güncelleme: <span id="current-date">19 Ağustos 2025</span>
+    <div class="container">
+        <header>
+            <h1>Deurne / Rivierenhof merkezli <strong>Antwerpen</strong> mini rehber</h1>
+            <div class="muted">Cesur adımlar at, akışa kapılma: Şehir senden hızlı değil.</div>
+            <div>
+                <span class="badge">Konum: Deurne / Rivierenhof çevresi</span>
+                <span class="badge">Süre: Bugünden — <strong>Perşembe, 28 Ağustos 2025</strong></span>
+            </div>
+        </header>
+
+        <section id="quicklook">
+            <h2><i class="fas fa-bolt"></i> Hızlı Bakış</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3><i class="fas fa-tram"></i> Yakın hatlar (tram)</h3>
+                    <ul class="list-ticks">
+                        <li><strong>Tram 10</strong> (Wijnegem ↔ Hoboken P+R Schoonselhof) — Turnhoutsebaan'dan <em>Zegel</em> üzerinden <em>Opera</em>/<em>Meir</em>/<em>Groenplaats</em>'a iner. Deurne tarafında <em>Gallifortlei</em>, <em>Ruggeveld</em>, <em>Ertbrugge</em> gibi duraklar işini görür.</li>
+                        <li><strong>Tram 5</strong> (Wijnegem ↔ P+R Linkeroever) — <em>Astrid (Metro)</em>, <em>Opera</em>, <em>Groenplaats</em>; merkez bağlantısı çok güçlü. Deurne'de <em>Ruggeveldlaan</em>/çevresi yoğun.</li>
+                        <li><strong>Tram 8</strong> (P+R Wommelgem ↔ Astrid) — Hızlı şekilde <em>Astrid/Centraal</em>'a taşır (Deurne <em>Muggenberg</em>, <em>Waterbaan</em> civarı).</li>
+                    </ul>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Not: Antwerp'in tram ağı dönem dönem çalışmalar nedeniyle değişebilir; güncel ağı kontrol et.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-ticket-alt"></i> Bilet &amp; Ödeme</h3>
+                    <ul class="list-ticks">
+                        <li><strong>De Lijn</strong> (tram/bus): Araca binerken <em>temassız</em> kart/telefonla <span class="kbd">beyaz terminale</span> dokun yeter; her yolcu kendi kartını dokundurur.</li>
+                        <li><strong>SNCB tren</strong> ile <em>Brussels Airport</em>: "Brussels Airport – Zaventem" hedefiyle bilet alırsan <em>havaalanı ek ücreti</em> çoğu bilette <em>zaten dahil</em>.</li>
+                    </ul>
+                    <div class="callout small"><strong><i class="fas fa-lightbulb"></i> İpucu:</strong> Antwerp merkezine gidince <em>Opera</em>/<em>Astrid</em> yeraltı istasyonları <em>Antwerpen‑Centraal</em>'a (merkez gar) 2‑3 dk yürüme.</div>
                 </div>
             </div>
+        </section>
 
-            <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">19 Ağu</p>
-                    <i class="fas fa-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">27°C</p><p class="text-sm opacity-90">18°C</p>
-                    <p class="mt-1 text-sm">Güneşli</p>
+        <section id="airport-day">
+            <h2><i class="fas fa-plane-departure"></i> Havaalanına Gidiş Planı • <span class="mono">PC5066</span> / <strong>28 Ağustos 2025 Perşembe</strong> • Kalkış 13:15 (BRU ➝ AYT)</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3><i class="fas fa-train"></i> Plan A — <u>Tren</u> (önerilen)</h3>
+                    <ol>
+                        <li>Deurne/Rivierenhof'tan <strong>Tram 10</strong> (Hoboken yönü) veya <strong>Tram 5</strong> (Linkeroever yönü) ile <strong>Antwerpen‑Centraal</strong> (Astrid/Opera) çevresine gel. 20–30 dk'yı baz al.</li>
+                        <li><strong>Antwerpen‑Centraal</strong>'dan <strong>Brussels Airport – Zaventem</strong>'e <u>doğrudan tren</u>ler ~30 dk sürer; istasyon <em>doğrudan terminalin altındadır</em>. Kapılara asansör/yürüyen merdivenle çıkarsın.</li>
+                        <li><strong>Zamanlama:</strong> Düşük stres için <u>en geç 09:30</u> civarı Deurne'den çık; böylece 11:00 gibi BRU'da olursun (check‑in/güvenlik için rahat 2+ saat). Gerçek saatler için SNCB canlı tarifeye bak.</li>
+                    </ol>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Not: "Airport Supplement/Diabolo" çoğu bilete otomatik eklenir; kapıdan geçişte barkodu okutarak girersin.</p>
                 </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">20 Ağu</p>
-                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">25°C</p><p class="text-sm opacity-90">17°C</p>
-                    <p class="mt-1 text-sm">Parçalı bulutlu</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">21 Ağu</p>
-                    <i class="fas fa-cloud-rain text-3xl my-2"></i>
-                    <p class="text-xl font-bold">23°C</p><p class="text-sm opacity-90">16°C</p>
-                    <p class="mt-1 text-sm">Zaman zaman yağış</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">22 Ağu</p>
-                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">24°C</p><p class="text-sm opacity-90">16°C</p>
-                    <p class="mt-1 text-sm">Bulutlu aralıklı</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">23 Ağu</p>
-                    <i class="fas fa-cloud text-3xl my-2"></i>
-                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">15°C</p>
-                    <p class="mt-1 text-sm">Serin ve bulutlu</p>
+                <div class="card">
+                    <h3><i class="fas fa-bus"></i> Plan B — <u>Airport Express Otobüs</u></h3>
+                    <p><strong>Airport Express</strong> Antwerp (Koningin Astridplein/Centraal önü) ↔ Brussels Airport arası servis yapar. Süre trafikle 45–60 dk civarı. Program ve kalkış noktasını resmi siteden kontrol et.</p>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Alternatif olarak bazı saatlerde FlixBus da <em>Rooseveltplaats</em>'tan BRU'ya çalışır; sefer/koltuk durumunu kontrol et.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <p class="mb-3 text-lg"><strong>Özet:</strong> Berlin'de hava sıcak ve güneşli başlayıp hafif serinleyecek. 21 Ağustos'ta yağmur bekleniyor. Hafta sonu tren yolculuğu için rahat koşullar.</p>
-                    <div class="bg-white/20 p-4 rounded-xl mt-4">
-                        <p class="font-semibold flex items-center"><i class="fas fa-umbrella-beach mr-2"></i> Öneriler</p>
-                        <p>19-20 Ağustos park ve açık hava aktiviteleri için ideal. 21 Ağustos'ta müzeler ve kapalı mekanlar önerilir.</p>
-                    </div>
+        <section id="move-like-a-local">
+            <h2><i class="fas fa-walking"></i> Şehir İçi Nasıl Akarsın?</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3><i class="fas fa-route"></i> Merkeze en pratik güzergâh</h3>
+                    <ol>
+                        <li><strong>Yakın duraklar:</strong> Deurne hattında <em>Ruggeveld</em>, <em>Gallifortlei</em>, <em>Lunden</em>, <em>Muggenberg</em> vb. (hangisi yakınsa).</li>
+                        <li><strong>Tram 10</strong> ya da <strong>5</strong> ile <em>Astrid/Opera</em>'ya in → <strong>Meir / Groenplaats / Katedral</strong> hattına tek araçla ulaşmış olursun.</li>
+                        <li><strong>Tram 8</strong> de seni direkt <em>Astrid</em>'e taşır; <em>Zoo</em> ve <em>Chocolate Nation</em> kapı önüne denk gelir.</li>
+                    </ol>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Ağdaki büyük çalışma ve sapmalar için duyuruları kontrol et.</p>
                 </div>
-                <div class="health-warning p-4 rounded-xl text-gray-900 bg-white">
-                    <p class="font-semibold flex items-center"><i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Notu</p>
-                    <p class="mt-2">Sıcak günlerde güneş kremi ve su tüketimi önemli. Gece serinliğine karşı ince ceket.</p>
+                <div class="card">
+                    <h3><i class="fas fa-bicycle"></i> Bisikletle hızlı şehir turu (Velo)</h3>
+                    <p>24 saatlik <strong>Velo day pass</strong> ile istasyonlardan bisiklet al–bırak yapabilirsin (günlük yaklaşık 5 €; ilk 30 dk her sürüşte dâhil).</p>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Uygulamada istasyon doluluğunu görürsün. Bisikleti geri kilitlerken ekrandan "park edildi" mesajını görmeyi alışkanlık yap.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Berlin: Haftalık Aktiviteler -->
-    <section class="card mb-8">
-        <div class="p-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">Berlin - Haftalık Aktivite Planı</h2>
-            <p class="mb-6 text-gray-700">Ders sonrası ve hafta sonu için özel aktivite önerileri (19-23 Ağustos):</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Pazartesi -->
-                <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                    <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-sun text-white"></i>
-                            </div>
-                            <h3 class="font-semibold text-blue-900">19 Ağu (Pzt)</h3>
-                        </div>
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">27°C</span>
-                    </div>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Öğleden sonra: <strong>Tempelhofer Feld</strong> - Bisiklet kiralayarak eski havaalanında tur</li>
-                        <li>Akşam: <strong>Klunkerkranich</strong> - Çatı katında günbatımı manzarası eşliğinde içecek</li>
+        <section id="see-do">
+            <h2><i class="fas fa-camera"></i> Gezi Planı (esnek, eğlenceli, <em>az yürü, çok gör</em>)</h2>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3><i class="fas fa-tree"></i> 1) <u>Rivierenhof</u> sabah yürüyüşü + OLT</h3>
+                    <ul>
+                        <li><strong>Rivierenhof Parkı:</strong> Göller, gül bahçesi, kaleler (Sterckshof &amp; Rivierenhof) ve geniş yürüyüş rotaları.</li>
+                        <li><strong>OLT Rivierenhof</strong> (Açıkhava Tiyatrosu): Yaz akşamları konserler &amp; programlar.</li>
+                    </ul>
+                    <p class="small muted"><i class="fas fa-info-circle"></i> Parkta Sterckshof'un koleksiyonları artık şehir merkezindeki DIVA'ya taşındı.</p>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-landmark"></i> 2) <u>Merkez İkonları</u> (aynı gün hepsi olur)</h3>
+                    <ul>
+                        <li><strong>Antwerpen‑Centraal</strong> çevresi: <em>Chocolate Nation</em> ve <em>ZOO Antwerpen</em> yan yana.</li>
+                        <li><strong>Meir</strong> &amp; <strong>Stadsfeestzaal</strong> boyunca yürüyüp <strong>Katedral</strong> ve <strong>Grote Markt</strong>'a geç.</li>
+                        <li><strong>DIVA</strong> (Pırlanta/Altın &amp; Gümüş Müzesi): Çarşamba hariç her gün 10:00–18:00.</li>
                     </ul>
                 </div>
-                
-                <!-- Salı -->
-                <div class="bg-purple-50 rounded-xl p-5 border border-purple-100">
-                    <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-cloud-sun text-white"></i>
-                            </div>
-                            <h3 class="font-semibold text-purple-900">20 Ağu (Sal)</h3>
-                        </div>
-                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-sm">25°C</span>
-                    </div>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Öğleden sonra: <strong>East Side Gallery</strong> - Tarihi Berlin Duvarı sanatını keşif</li>
-                        <li>Akşam: <strong>Markthalle Neun</strong> - Dünya mutfaklarından lezzetler</li>
+
+                <div class="card">
+                    <h3><i class="fas fa-water"></i> 3) <u>Eilandje</u> &amp; liman hikâyeleri</h3>
+                    <ul>
+                        <li><strong>MAS</strong> — Müze salonları: Salı‑Pazar 10:00–17:00. <em>Bulvar</em> &amp; <em>panorama terası</em> yaz döneminde geç saatlere kadar açık.</li>
+                        <li><strong>Red Star Line Müzesi</strong> — Göçmenlik hikâyeleri: Salı‑Pazar 10:00–17:00.</li>
+                        <li><strong>Havenhuis (Port House)</strong> — Zaha Hadid'in ikonik yapısı. Ziyaret/turlar için resmi sayfaya göz at.</li>
+                        <li><strong>Ulaşım:</strong> <em>Opera/Astrid</em>'ten <strong>Tram 1</strong> ile "MAS" durağına kısa yol.</li>
                     </ul>
                 </div>
-                
-                <!-- Çarşamba -->
-                <div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
-                    <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-cloud-rain text-white"></i>
-                            </div>
-                            <h3 class="font-semibold text-amber-900">21 Ağu (Çar)</h3>
-                        </div>
-                        <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-sm">23°C</span>
-                    </div>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Öğleden sonra: <strong>Pergamon Müzesi</strong> - Antik eserler koleksiyonu</li>
-                        <li>Akşam: <strong>Kreuzberg'de kapalı mekan</strong> - Oyun kafeleri veya karaoke</li>
-                    </ul>
-                </div>
-                
-                <!-- Perşembe -->
-                <div class="bg-green-50 rounded-xl p-5 border border-green-100">
-                    <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-cloud-sun text-white"></i>
-                            </div>
-                            <h3 class="font-semibold text-green-900">22 Ağu (Per)</h3>
-                        </div>
-                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">24°C</span>
-                    </div>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Öğleden sonra: <strong>Mauerpark Pazarı</strong> - Vintage eşyalar ve sokak yemekleri</li>
-                        <li>Akşam: <strong>Prater Garten</strong> - Berlin'in en eski biergarten'ı</li>
-                    </ul>
-                </div>
-                
-                <!-- Cuma -->
-                <div class="bg-red-50 rounded-xl p-5 border border-red-100">
-                    <div class="flex justify-between items-center mb-3">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center mr-3">
-                                <i class="fas fa-cloud text-white"></i>
-                            </div>
-                            <h3 class="font-semibold text-red-900">23 Ağu (Cum)</h3>
-                        </div>
-                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">22°C</span>
-                    </div>
-                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Sabah: <strong>Yurttan çıkış ve eşyaları toplama</strong></li>
-                        <li>Öğle: <strong>Berlin Hauptbahnhof</strong>'a gidiş ve tren yolculuğu</li>
+
+                <div class="card">
+                    <h3><i class="fas fa-home"></i> 4) <u>Zurenborg &amp; Güney</u> (mimarî + rahat tempo)</h3>
+                    <ul>
+                        <li><strong>Cogels‑Osylei</strong> — Belle‑Époque cepheleri arasında kısa yürüyüş.</li>
+                        <li><strong>Rubenshuis</strong> — Tarihî ev dönüşümde; bahçe ve yeni karşılama açık, "experience" içeriklerine bakılabilir.</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Berlin'den Anvers'e Tren Yolculuğu -->
-    <section class="card mb-8">
-        <div class="p-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                <i class="fas fa-train mr-3"></i> Berlin'den Anvers'e Tren Yolculuğu (23 Ağustos)
-            </h2>
+        <section id="phrasebook">
+            <h2><i class="fas fa-language"></i> Mini Dil Kartı (yerel + pratik)</h2>
+            <div class="card">
+                <p class="muted small"><i class="fas fa-info-circle"></i> Okunuşlar yaklaşık ve pratiklik içindir; Felemenkçe (Vlaams) "g/kh" sesleri boğazdan gelir—Türkçe "hı" gibi.</p>
+                <table class="phrase" width="100%">
+                    <thead>
+                        <tr><th align="left">Vlaams/Nederlands</th><th align="left">Okunuş</th><th align="left">TR / EN / DE</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Awel, goeiemorgen!</strong></td><td>avel, guy‑ı‑morğın</td><td>"Şey… günaydın!" / Good morning! / Guten Morgen!</td></tr>
+                        <tr><td><strong>Waar is de halte / perron?</strong></td><td>vaar iz dı halte / perron</td><td>Durak/peron nerede? / Where is the stop/platform? / Wo ist die Haltestelle/der Bahnsteig?</td></tr>
+                        <tr><td><strong>We pakken tram vijf/tien/acht.</strong></td><td>vı pakken tram fayf/tiin/aht</td><td>Tram 5/10/8'i alıyoruz. / We take tram… / Wir nehmen die Straßenbahn…</td></tr>
+                        <tr><td><strong>Een kaartje alstublieft.</strong></td><td>ın kaarçye alstüblift</td><td>Bir bilet lütfen. / A ticket please. / Ein Ticket, bitte.</td></tr>
+                        <tr><td><strong>Dank u wel — fijne dag!</strong></td><td>dank ü vel — faynı dah</td><td>Teşekkürler, iyi günler! / Thanks, have a nice day! / Danke, schönen Tag!</td></tr>
+                        <tr><td><strong>'k Heb goesting in frietjes en een bolleke.</strong></td><td>k hep husting in friçıs en ın bolıke</td><td>Canım patates kızartması ve bir "bolleke" (De Koninck) çekti. / I fancy fries & a bolleke. / Ich habe Lust auf Pommes & ein Bolleke.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tools">
+            <h2><i class="fas fa-mobile-alt"></i> Uygulamalar &amp; Bağlantılar (güncel bilgi için)</h2>
+            <ul class="list-ticks">
+                <li><strong>De Lijn</strong> ağ/duyuru ve hat haritası (tram çalışmaları &amp; rota değişiklikleri).</li>
+                <li><strong>De Lijn temassız ödeme</strong> açıklaması.</li>
+                <li><strong>SNCB</strong> — "By train to Brussels Airport".</li>
+                <li><strong>SNCB canlı saatler</strong> (kalkış/peron).</li>
+                <li><strong>Airport Express</strong> Antwerp ↔ BRU resmi sayfası.</li>
+                <li><strong>Slim naar Antwerpen</strong> — Şehrin hareketlilik portalı.</li>
+                <li><strong>Velo Antwerpen</strong> (day pass, uygulama).</li>
+            </ul>
+        </section>
+
+        <section id="safety">
+            <h2><i class="fas fa-clipboard-list"></i> Mini Notlar &amp; İleri Plan</h2>
+            <ul class="list-ticks">
+                <li><strong>Tramda</strong> ineceğin zaman kırmızı <em>STOP</em> düğmesine bas; inince "<em>Dank u!</em>" demek nezakettir.</li>
+                <li><strong>Sportpaleis/Noorderlaan</strong> çevresinde altyapı çalışmaları (Oosterweel) var; bazı duraklar geçici değişebilir.</li>
+                <li><strong>Müze saatleri</strong> mevsime göre değişebilir: <em>MAS panoraması yazın geç</em> açık; <em>Red Star Line</em> Salı‑Pazar; <em>DIVA</em> Çarşamba kapalı. Güncel sayfayı kontrol et.</li>
+            </ul>
+            <div class="callout">
+                <strong><i class="fas fa-route"></i> Cesaret verici rota:</strong> Bugün Rivierenhof'ta yürüyüş + akşam MAS terasında gün batımı; yarın merkezde Chocolate Nation ➝ Zoo ➝ Katedral ➝ Grote Markt; ertesi gün Eilandje'de Red Star Line ➝ Port House. Perşembe sabahı erkenden tram + tren kombinasyonuyla BRU — <em>her şey planlı, sen sakinsin.</em>
+            </div>
+        </section>
+
+        <footer>
+            <p>Bu rehber, paylaşmaya uygun düzende tutulmuştur; konum <strong>bilerek yuvarlanmıştır</strong>.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('navLinks');
+            const toggle = document.getElementById('menuToggle');
             
-            <div class="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
-                <div class="flex items-start">
-                    <i class="fas fa-info-circle text-blue-600 text-xl mt-1 mr-3"></i>
-                    <div>
-                        <p class="font-medium text-blue-800">Önemli Bilgiler:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-700">
-                            <li>Yolculuk süresi: 7-8 saat (aktarmalı)</li>
-                            <li>Biletler erken alındığında €27.99'dan başlıyor</li>
-                            <li>Berlin Hbf (Merkez İstasyon)'dan kalkış</li>
-                            <li>Anvers Merkez İstasyonu'na varış</li>
-                            <li>Aktarmalar genellikle Köln veya Brüksel'de</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Önerilen Tren Seçenekleri:</h3>
-            
-            <div class="space-y-4">
-                <!-- Seçenek 1 -->
-                <div class="train-option p-4 rounded-lg bg-white">
-                    <div class="flex flex-wrap items-center justify-between mb-3">
-                        <div>
-                            <span class="font-bold text-lg">08:25 - 15:45</span>
-                            <span class="ml-3 bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">En Hızlı</span>
-                        </div>
-                        <div class="text-xl font-bold text-blue-600">€27.99</div>
-                    </div>
-                    <div class="text-gray-700 flex items-center">
-                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
-                        <span>1 aktarma (Köln Hbf)</span>
-                    </div>
-                    <div class="mt-2 text-sm text-gray-600">
-                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-wifi mr-1"></i> Ücretsiz WiFi • <i class="fas fa-utensils mr-1"></i> Bistro
-                    </div>
-                </div>
-                
-                <!-- Seçenek 2 -->
-                <div class="train-option p-4 rounded-lg bg-white">
-                    <div class="flex flex-wrap items-center justify-between mb-3">
-                        <div>
-                            <span class="font-bold text-lg">10:15 - 17:55</span>
-                            <span class="ml-3 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-sm">Popüler</span>
-                        </div>
-                        <div class="text-xl font-bold text-blue-600">€29.99</div>
-                    </div>
-                    <div class="text-gray-700 flex items-center">
-                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
-                        <span>1 aktarma (Brüksel Midi)</span>
-                    </div>
-                    <div class="mt-2 text-sm text-gray-600">
-                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-wifi mr-1"></i> Ücretsiz WiFi • <i class="fas fa-plug mr-1"></i> Priz
-                    </div>
-                </div>
-                
-                <!-- Seçenek 3 -->
-                <div class="train-option p-4 rounded-lg bg-white">
-                    <div class="flex flex-wrap items-center justify-between mb-3">
-                        <div>
-                            <span class="font-bold text-lg">12:05 - 19:30</span>
-                            <span class="ml-3 bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">Ekonomik</span>
-                        </div>
-                        <div class="text-xl font-bold text-blue-600">€19.99</div>
-                    </div>
-                    <div class="text-gray-700 flex items-center">
-                        <i class="fas fa-exchange-alt mr-2 text-gray-500"></i>
-                        <span>2 aktarma (Hannover & Köln)</span>
-                    </div>
-                    <div class="mt-2 text-sm text-gray-600">
-                        <i class="fas fa-chair mr-1"></i> 2. Sınıf • <i class="fas fa-suitcase mr-1"></i> Bagaj bölmesi
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                <div class="flex items-start">
-                    <i class="fas fa-lightbulb text-yellow-600 text-xl mt-1 mr-3"></i>
-                    <div>
-                        <p class="font-medium text-yellow-800">Tren Yolculuğu İpuçları:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-700">
-                            <li>Biletlerinizi en az 3 gün önce <a href="https://www.bahn.de" class="text-blue-600 underline" target="_blank">bahn.de</a>'den alın</li>
-                            <li>Büyük valizler için rezervasyon yaptırın (€4.50)</li>
-                            <li>Yanınıza şarj cihazı, atıştırmalık ve su alın</li>
-                            <li>Aktarma istasyonlarında minimum 20 dakika süre bırakın</li>
-                            <li>DB Navigator uygulamasını indirin (gerçek zamanlı bilgi)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Anvers Hava Durumu (24–28 Ağu) -->
-    <section class="weather-container card mb-8 text-white">
-        <div class="relative z-10 p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold flex items-center">
-                    <i class="fas fa-cloud-sun mr-3"></i> Anvers Hava Durumu (24–28 Ağustos)
-                </h2>
-                <div class="bg-white/20 px-3 py-1 rounded-full text-sm">
-                    <i class="fas fa-sync-alt mr-1"></i> Tahmini
-                </div>
-            </div>
-
-            <div class="weather-forecast flex flex-wrap justify-between gap-3 mb-6">
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">24 Ağu</p>
-                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">23°C</p><p class="text-sm opacity-90">15°C</p>
-                    <p class="mt-1 text-sm">Parçalı bulutlu</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">25 Ağu</p>
-                    <i class="fas fa-cloud-rain text-3xl my-2"></i>
-                    <p class="text-xl font-bold">21°C</p><p class="text-sm opacity-90">14°C</p>
-                    <p class="mt-1 text-sm">Zaman zaman yağış</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">26 Ağu</p>
-                    <i class="fas fa-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">24°C</p><p class="text-sm opacity-90">15°C</p>
-                    <p class="mt-1 text-sm">Güneşli aralıklar</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">27 Ağu</p>
-                    <i class="fas fa-cloud-sun text-3xl my-2"></i>
-                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">14°C</p>
-                    <p class="mt-1 text-sm">Serin ve sakin</p>
-                </div>
-                <div class="weather-day flex-1 min-w-[150px]">
-                    <p class="font-semibold">28 Ağu</p>
-                    <i class="fas fa-cloud text-3xl my-2"></i>
-                    <p class="text-xl font-bold">22°C</p><p class="text-sm opacity-90">13°C</p>
-                    <p class="mt-1 text-sm">Uçuş saati öncesi bulutlu</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <p class="mb-3 text-lg"><strong>Özet:</strong> Son Ağustos günlerinde Anvers'te ılıman ve zaman zaman yağışlı hava beklenir. Katmanlı giyinin; hafif yağmurluk ve şemsiye önerilir.</p>
-                    <div class="bg-white/20 p-4 rounded-xl mt-4">
-                        <p class="font-semibold flex items-center"><i class="fas fa-umbrella-beach mr-2"></i> Öneriler</p>
-                        <p>Müzeler ve kafeler yağışlı saatler için iyi alternatiftir. Parklar için 26–27 Ağustos uygundur.</p>
-                    </div>
-                </div>
-                <div class="health-warning p-4 rounded-xl text-gray-900 bg-white">
-                    <p class="font-semibold flex items-center"><i class="fas fa-head-side-mask mr-2 text-red-500"></i> Sağlık Notu</p>
-                    <p class="mt-2">Nem %70+ olabilir; polen hassasiyeti olanlar için göz damlası/maske önerilir. Uzun yürüyüşlerde su tüketimini artırın.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Anvers Gezi Rehberi (24–28 Ağu) -->
-    <section class="card mb-8">
-        <div class="p-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">Anvers Gezi Rehberi (24–28 Ağustos)</h2>
-            <p class="mb-6 text-gray-700">Şehir merkezinde yürüyüşe uygun bir rota ve kısa ziyaretler için öne çıkan yerler:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3"><i class="fas fa-star text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Tarihi Merkez</h3></div>
-                    <p class="text-gray-700">Grote Markt meydanı, Brabo Çeşmesi ve Anvers Katedrali. Akşam ışıklandırmasıyla etkileyici.</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center mr-3"><i class="fas fa-ship text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Scheldt Nehri Kıyısı</h3></div>
-                    <p class="text-gray-700">Nehir manzarası, yürüyüş yolları ve Steen Kalesi. Güneş batımı için mükemmel.</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mr-3"><i class="fas fa-gem text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Elmas Bölgesi</h3></div>
-                    <p class="text-gray-700">Dünya elmas ticaretinin kalbi. Müzeler ve tarihi binalarla çevrili.</p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                    <div class="flex items-center mb-3"><div class="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center mr-3"><i class="fas fa-utensils text-white"></i></div><h3 class="text-xl font-semibold text-gray-800">Yerel Lezzetler</h3></div>
-                    <p class="text-gray-700">Belçika çikolatası, waffle ve yerel biraların tadına bakabileceğiniz mekanlar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Almanca Cümleler (B2–C1) -->
-    <section class="card mb-8">
-        <div class="p-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title flex items-center">
-                <i class="fas fa-language mr-3"></i> Pratik Almanca Cümleler (B2–C1 Seviyesi)
-            </h2>
-            <p class="mb-6 text-gray-700">Günlük ve akademik/iş bağlamlarında kibar istek, açıklama ve teyit cümleleri.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
-                    <p class="font-semibold text-gray-800 mb-2">„Entschuldigen Sie, wäre es möglich, mir kurz zu erläutern, wie ich am effizientesten zur Universitätsbibliothek gelange und ob sie heute geöffnet ist?“</p>
-                    <p class="text-gray-700">Kütüphaneye en hızlı nasıl gidebileceğimi ve bugün açık olup olmadığını kısaca anlatabilir misiniz?</p>
-                </div>
-                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
-                    <p class="font-semibold text-gray-800 mb-2">„Könnten Sie mir bitte mitteilen, ob es in diesem Stadtteil abends besondere Sicherheitsaspekte zu beachten gibt?“</p>
-                    <p class="text-gray-700">Bu semtte akşamları dikkat edilmesi gereken özel güvenlik durumları var mı?</p>
-                </div>
-                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
-                    <p class="font-semibold text-gray-800 mb-2">„Ich würde gern einen Termin vereinbaren; wäre kommenden Mittwoch gegen 14 Uhr für Sie machbar?“</p>
-                    <p class="text-gray-700">Bir randevu ayarlamak isterim; gelecek Çarşamba saat 14:00 sizin için uygun olur mu?</p>
-                </div>
-                <div class="phrase-card bg-white p-4 rounded-lg shadow-sm">
-                    <p class="font-semibold text-gray-800 mb-2">„Falls es Ihnen recht ist, würde ich die Präsentation um einige praktische Beispiele erweitern, damit der theoretische Teil greifbarer wird.“</p>
-                    <p class="text-gray-700">Uygunsa, sunumu bazı pratik örneklerle genişletmek isterim; kuramsal kısım daha somut olur.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-6 text-gray-600 text-sm">
-        <p>© 2025 Berlin ve Anvers Rehberi – GLS Berlin & Anvers için hazırlanmıştır</p>
-        <p class="mt-2">Bu rehber bilgilendirme amaçlıdır. Fiyatlar ve detaylar değişebilir.</p>
-    </footer>
-</div>
-
-<script>
-  // Güncel tarihi gösterme
-  const now = new Date();
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
-  const formattedDate = now.toLocaleDateString('tr-TR', options);
-  const el = document.getElementById('current-date');
-  if (el) { el.textContent = formattedDate; }
-</script>
+            if (!menu.contains(event.target) && !toggle.contains(event.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
